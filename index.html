@@ -37,7 +37,7 @@
 <div class="container">
 
 <!--  login-->
-  <div class="login-wrapper" id="loginWrapper">
+  <div class="smooth-wrapper" id="loginWrapper">
     <section class="login" id="loginSection">
       <div class="login__header">
         <h2 class="login__title">BAFFI</h2>
@@ -62,16 +62,15 @@
               </label>
               <a href="#" class="login-form__forgot-link">Forgot Password?</a>
             </div>
-            <button class="login-form__button login-btn">Sign In</button><!--add class active-->
+            <button class="login-form__button home-btn">Sign In</button><!--add class active-->
           </form>
 
           <div class="login-div">
             <p class="login-div__text">Or sign in with</p>
           </div>
 
-          <button class="login__button login-btn login__button_google">Sign in with Google</button>
-          <button class="login__button login-btn login__button_apple">Sign in with Apple</button>
-
+          <button class="login__button home-btn login__button_google">Sign in with Google</button>
+          <button class="login__button home-btn login__button_apple">Sign in with Apple</button>
 
         </section>
         <div class="login__footer">
@@ -224,6 +223,16 @@
       </div>
     </div>
   </main>
+
+<!--  modal-->
+  <div class="smooth-wrapper show">
+    <div class="modal">
+      <p class="modal__desc">Please, verify your e-mail. </p>
+      <button class="modal__resend">Resend e-mail</button>
+      <button class="modal__button home-btn">Sign In</button>
+    </div>
+  </div>
+
 </div>
 
 
