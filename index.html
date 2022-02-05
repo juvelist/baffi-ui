@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content=""/>
+  <meta name="keywords" content=""/>
+
+  <link rel="stylesheet" href="css/app.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="">
+  <meta property="twitter:title" content="">
+  <meta property="twitter:description" content="">
+  <meta property="twitter:image" content="">
+  <meta property="twitter:image:height" content="600">
+  <meta property="twitter:image:width" content="1200">
+
+  <title>BAFFI</title>
+</head>
+<body>
+
+<div class="container">
+
+<!--  login-->
+  <div class="login-wrapper" id="loginWrapper">
+    <section class="login" id="loginSection">
+      <div class="login__header">
+        <h2 class="login__title">BAFFI</h2>
+      </div>
+      <div class="login__wrapper">
+        <section class="login__section">
+          <h3 class="login__subtitle">LOGIN</h3>
+          <p class="login__desc">Welcome. Please sign-in to your account.</p>
+
+<!--          login-form-->
+          <form action="" class="login-form">
+            <label class="login-form__label">
+              <input type="text" class="login-form__input" placeholder="E-mail">
+            </label>
+            <label class="login-form__label login-form__label_pass">
+              <input type="password" class="login-form__input" placeholder="Password">
+              <span class="login-form__label_eye"></span>
+            </label>
+            <div class="login-form__forgot-wrap">
+              <label class="login-form__checkbox-label">
+                <input type="checkbox" class="login-form__checkbox">Remember me
+              </label>
+              <a href="#" class="login-form__forgot-link">Forgot Password?</a>
+            </div>
+            <button class="login-form__button login-btn">Sign In</button><!--add class active-->
+          </form>
+
+          <div class="login-div">
+            <p class="login-div__text">Or sign in with</p>
+          </div>
+
+          <button class="login__button login-btn login__button_google">Sign in with Google</button>
+          <button class="login__button login-btn login__button_apple">Sign in with Apple</button>
+
+
+        </section>
+        <div class="login__footer">
+          <p class="login__footer_desc">Don’t have an account? <a href="#" class="login__footer_link">Create account</a></p>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <aside class="sidebar">
+    <nav>
+      <ul class="sidebar__list">
+<!--        <li class="sidebar__item">-->
+<!--          <a href="#" class="sidebar__link sidebar__link_home">Home</a>-->
+<!--        </li>-->
+<!--        <li class="sidebar__item">-->
+<!--          <a href="#" class="sidebar__link sidebar__link_user">Profile</a>-->
+<!--        </li>-->
+<!--        <li class="sidebar__item">-->
+<!--          <a href="#" class="sidebar__link sidebar__link_help">Help</a>-->
+<!--        </li>-->
+<!--        <li class="sidebar__item">-->
+<!--          <a href="#" class="sidebar__link sidebar__link_add">Add Tour</a>-->
+<!--        </li>-->
+<!--        <li class="sidebar__item">-->
+<!--          <a href="#" class="sidebar__link sidebar__link_log-out">Sign out</a>-->
+<!--        </li>-->
+        <li class="sidebar__item" id="sidebarLogin">
+          <a href="#" class="sidebar__link sidebar__link_log-in">Log in/ SIgn up </a>
+          <div class="sidebar__tooltip" id="sidebarTooltip">
+            <a href="#" class="sidebar__tooltip_link" id="logIn">Log In</a>
+            <a href="#" class="sidebar__tooltip_link" id="signUp">Sign Up</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+<!--  main-->
+  <main class="main">
+<!--    header-->
+    <header class="header">
+      <div class="header__content">
+        <h1 class="header__content_title">BAFFI</h1>
+        <form action="">
+          <label class="header__input-label">
+            <input type="text" class="header__input" placeholder="Where would you like to go?">
+            <button type="button" class="header__voice-btn"></button>
+          </label>
+        </form>
+      </div>
+    </header>
+
+<!--    content-->
+    <div class="content">
+<!--      home-->
+      <div class="home">
+
+
+        <!--section-->
+        <section class="home__section">
+          <h2 class="home__title">Near me</h2>
+          <div class="home__wrapper">
+            <!--card-->
+            <a href="#" class="card" style="background-image: url('img/card-background.jpg')">
+              <div class="card__wrapper">
+                <p class="card__location">Italiano</p>
+                <div class="card__content">
+                  <div>
+                    <h3 class="card__title">Florence at night</h3>
+                    <p class="card__price">€80.00</p>
+                    <p class="card__time">1.5 hours</p>
+                  </div>
+                  <div class="card__rate-section">
+                    <img src="img/icons/man.svg" class="card__icon" alt="icon">
+                    <p class="card__rate">4.5</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!--card-->
+            <a href="#" class="card" style="background-image: url('img/card-background.jpg')">
+              <div class="card__wrapper">
+                <p class="card__location">Italiano</p>
+                <div class="card__content">
+                  <div>
+                    <h3 class="card__title">Florence at night</h3>
+                    <p class="card__price">€80.00</p>
+                    <p class="card__time">1.5 hours</p>
+                  </div>
+                  <div class="card__rate-section">
+                    <img src="img/icons/man.svg" class="card__icon" alt="icon">
+                    <p class="card__rate">4.5</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="home__more-wrap">
+            <a href="#" class="home__more">See all</a>
+          </div>
+        </section>
+
+
+        <!--section-->
+        <section class="home__section">
+          <h2 class="home__title">Culture</h2>
+          <div class="home__wrapper">
+            <!--card-->
+            <a href="#" class="card" style="background-image: url('img/card-background.jpg')">
+              <div class="card__wrapper">
+                <p class="card__location">Italiano</p>
+                <div class="card__content">
+                  <div>
+                    <h3 class="card__title">Florence at night</h3>
+                    <p class="card__price">€80.00</p>
+                    <p class="card__time">1.5 hours</p>
+                  </div>
+                  <div class="card__rate-section">
+                    <img src="img/icons/man.svg" class="card__icon" alt="icon">
+                    <p class="card__rate">4.5</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!--card-->
+            <a href="#" class="card" style="background-image: url('img/card-background.jpg')">
+              <div class="card__wrapper">
+                <p class="card__location">Italiano</p>
+                <div class="card__content">
+                  <div>
+                    <h3 class="card__title">Florence at night</h3>
+                    <p class="card__price">€80.00</p>
+                    <p class="card__time">1.5 hours</p>
+                  </div>
+                  <div class="card__rate-section">
+                    <img src="img/icons/man.svg" class="card__icon" alt="icon">
+                    <p class="card__rate">4.5</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="home__more-wrap">
+            <a href="#" class="home__more">See all</a>
+          </div>
+        </section>
+
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
