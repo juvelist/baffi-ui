@@ -608,6 +608,9 @@ body.scroll-off {
   text-align: center;
   width: 100px;
   z-index: 2; }
+  @media screen and (max-width: 1440px) {
+    .sidebar {
+      padding: 30px 8px; } }
   .sidebar__list {
     display: flex;
     flex-direction: column; }
@@ -705,7 +708,7 @@ body.scroll-off {
   background: #454E5D;
   height: 240px;
   left: 100px;
-  padding: 30px 30px 36px;
+  padding: 30px 30px 35px 50px;
   position: fixed;
   right: 0;
   top: 0;
@@ -713,8 +716,7 @@ body.scroll-off {
   @media screen and (max-width: 1440px) {
     .header {
       height: 200px; } }
-  .header:before {
-    background: no-repeat center/cover url("../img/header-background.jpg");
+  .header:before, .header:after {
     border-radius: 100px 0 0 0;
     content: '';
     position: absolute;
@@ -722,6 +724,11 @@ body.scroll-off {
     left: 0;
     right: 0;
     bottom: 0; }
+  .header:before {
+    background: no-repeat center/cover url("../img/header-background.jpg"); }
+  .header.smooth:after {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(0.6px); }
   .header__content {
     align-items: center;
     display: flex;
@@ -730,9 +737,14 @@ body.scroll-off {
     height: 100%;
     position: relative;
     z-index: 1; }
-    .header__content_title {
-      color: #FFFFFF;
-      font: 700 40px helvetica-neue-bold, sans-serif; }
+  .header__title {
+    color: #FFFFFF;
+    font: 700 40px helvetica-neue-bold, sans-serif; }
+  .header__subtitle {
+    align-self: flex-start;
+    color: #FFFFFF;
+    font: 700 32px helvetica-neue-bold, sans-serif;
+    text-align: left; }
   .header__input-label {
     background-color: #FFFFFF;
     border-radius: 10px;

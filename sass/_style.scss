@@ -277,6 +277,9 @@ body {
   text-align: center;
   width: 100px;
   z-index: 2;
+  @media screen and (max-width: 1440px) {
+    padding: 30px 8px;
+  }
   &__list {
     display: flex;
     flex-direction: column;
@@ -419,7 +422,7 @@ body {
   background: $backSide;
   height: 240px;
   left: 100px;
-  padding: 30px 30px 36px;
+  padding: 30px 30px 35px 50px;
   position: fixed;
   right: 0;
   top: 0;
@@ -427,8 +430,8 @@ body {
   @media screen and (max-width: 1440px) {
     height: 200px;
   }
-  &:before {
-    background: no-repeat center/cover url('../img/header-background.jpg');
+  &:before,
+  &:after {
     border-radius: 100px 0 0 0;
     content: '';
     position: absolute;
@@ -436,6 +439,13 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+  }
+  &:before {
+    background: no-repeat center/cover url('../img/header-background.jpg');
+  }
+  &.smooth:after {
+    background: rgba(0, 0, 0, .6);
+    backdrop-filter: blur(0.6px);
   }
   &__content {
     align-items: center;
@@ -445,10 +455,16 @@ body {
     height: 100%;
     position: relative;
     z-index: 1;
-    &_title {
-      color: $colorWhite;
-      font: 700 40px helvetica-neue-bold, sans-serif;
-    }
+  }
+  &__title {
+    color: $colorWhite;
+    font: 700 40px helvetica-neue-bold, sans-serif;
+  }
+  &__subtitle {
+    align-self: flex-start;
+    color: $colorWhite;
+    font: 700 32px helvetica-neue-bold, sans-serif;
+    text-align: left;
   }
   &__input-label {
     background-color: $backMain;
