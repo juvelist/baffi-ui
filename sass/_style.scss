@@ -769,9 +769,9 @@ body {
     }
   }
   &__card {
+    aspect-ratio: 1;
     background-color: $backMain;
     border-radius: 8px;
-    aspect-ratio: 1;
     overflow: hidden;
     &_img {
       object-fit: cover;
@@ -825,5 +825,75 @@ body {
     height: 100%;
     object-fit: cover;
     width: 100%;
+  }
+}
+
+// media item
+.media-item {
+  display: flex;
+  justify-content: center;
+  // media
+  &__media {
+    flex: 0 1 560px;
+    &_img-wrap {
+      aspect-ratio: 1;
+      background: $backSide;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      width: 100%;
+    }
+    &_img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  &__btn-block {
+    display: flex;
+    justify-content: center;
+    & > .btn-main:first-child {
+      margin-right: 20px;
+    }
+  }
+  // data
+  &__data {
+    flex: 0 1 370px;
+    margin: 0 150px 0 130px;
+    &_info {
+      border-bottom: 1px solid #E5E5E5;
+      box-sizing: border-box;
+      font: 700 20px helvetica-neue-bold, sans-serif;
+      margin-bottom: 8px;
+      padding: 7px 15px 15px;
+      white-space: nowrap;
+      & input,
+      & span {
+        font: 400 20px helvetica-neue-regular, sans-serif;
+        margin-left: 12px;
+      }
+      &.label {
+        border: 1px solid #E5E5E5;
+        display: flex;
+        padding: 7px 15px;
+      }
+      &.textarea {
+        flex-direction: column;
+      }
+      &.edit {
+        padding-right: 45px;
+        position: relative;
+        &:after {
+          background: no-repeat center/contain url('../img/icons/edit.svg');
+          content: '';
+          height: 16px;
+          right: 16px;
+          margin: auto 0;
+          position: absolute;
+          top: 12px;
+          width: 16px;
+        }
+      }
+    }
   }
 }

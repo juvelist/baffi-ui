@@ -224,7 +224,7 @@
       </div>
 
 <!--      media library-->
-      <div class="media-lib">
+      <div class="media-lib" style="display: none;">
         <div class="media-lib__header">
 <!--          select-->
           <div class="media-lib__select" id="mediaLibSelect">
@@ -276,6 +276,33 @@
         </div>
 
 
+      </div>
+
+<!--      media item-->
+      <div class="media-item">
+<!--        media-->
+        <div class="media-item__media">
+          <div class="media-item__media_img-wrap"><img src="img/media.jpg" class="media-item__media_img" alt=""></div>
+          <div class="media-item__btn-block">
+            <button class="btn-main">Edit image</button>
+            <button class="btn-main">Delete</button>
+          </div>
+        </div>
+<!--        data-->
+        <div class="media-item__data">
+          <p class="media-item__data_info">Uploaded on: <span>01.02.2021</span></p>
+          <p class="media-item__data_info">File name: <span>lorem ipsum.Png</span></p>
+          <p class="media-item__data_info">File type: <span>image</span></p>
+          <p class="media-item__data_info">File size: <span>26 KB</span></p>
+          <p class="media-item__data_info">Dimensions: <span>512 by 512 pixels</span></p>
+          <p class="media-item__data_info">Title: <span>Lorem Ipsum.png</span></p>
+          <label class="media-item__data_info label edit">Title: <input type="text" value="Lorem Ipsum.png"></label>
+          <label class="media-item__data_info label textarea edit">Description:
+            <br>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Optional description of the file for the guide"></textarea>
+          </label>
+          <label class="media-item__data_info label">File URL: <input type="text" value="https://baffi.me"></label>
+        </div>
       </div>
 
     </div>
