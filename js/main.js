@@ -3,6 +3,7 @@ let loginWrapper = document.getElementById('loginWrapper');
 let loginSection = document.getElementById('loginSection');
 let sidebarLogin = document.getElementById('sidebarLogin');
 let sidebarTooltip = document.getElementById('sidebarTooltip');
+let mediaLibSelect = document.getElementById('mediaLibSelect');
 
 function toggleLoginTooltip() {
   sidebarTooltip.classList.toggle('active');
@@ -25,3 +26,9 @@ logIn.addEventListener("click", openLoginSection);
 loginWrapper.addEventListener("click", closeLoginSection);
 
 sidebarLogin.addEventListener("click", toggleLoginTooltip);
+
+mediaLibSelect.addEventListener("click", function (){
+  this.classList.toggle('active');
+});
+
+

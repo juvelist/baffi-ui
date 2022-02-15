@@ -117,20 +117,21 @@
         <h1 class="header__title">BAFFI</h1>
 
         <h2 class="header__subtitle">Media library</h2>
-<!--        <form action="">-->
-<!--          <label class="header__input-label">-->
-<!--            <input type="text" class="header__input" placeholder="Where would you like to go?">-->
-<!--            <button type="button" class="header__voice-btn"></button>-->
-<!--          </label>-->
-<!--        </form>-->
+        <form action="" style="display: none;">
+          <label class="header__input-label">
+            <input type="text" class="header__input" placeholder="Where would you like to go?">
+            <button type="button" class="header__voice-btn"></button>
+          </label>
+        </form>
       </div>
+      
+      <div class="avatar"><img src="img/avatar.jpg" class="avatar__img" alt=""></div>
     </header>
 
 <!--    content-->
     <div class="content">
 <!--      home-->
-      <div class="home">
-
+      <div class="home" style="display: none;">
 
         <!--section-->
         <section class="home__section">
@@ -176,7 +177,6 @@
           </div>
         </section>
 
-
         <!--section-->
         <section class="home__section">
           <h2 class="home__title">Culture</h2>
@@ -221,8 +221,63 @@
           </div>
         </section>
 
+      </div>
+
+<!--      media library-->
+      <div class="media-lib">
+        <div class="media-lib__header">
+<!--          select-->
+          <div class="media-lib__select" id="mediaLibSelect">
+            <p class="media-lib__selected">All media items</p>
+            <div class="media-lib__selection">
+              <ul class="media-lib__selection_list">
+                <li class="media-lib__selection_item checked">All Media Items</li>
+                <li class="media-lib__selection_item">Images</li>
+                <li class="media-lib__selection_item">Audio</li>
+                <li class="media-lib__selection_item">Video</li>
+                <li class="media-lib__selection_item">Not used</li>
+              </ul>
+            </div>
+          </div>
+<!--          search-->
+          <form action="">
+            <label class="media-lib__search-label">
+              <input type="text" class="media-lib__search" placeholder="Search name">
+            </label>
+          </form>
+        </div>
+<!--        media library content-->
+        <div class="media-lib__content">
+          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
+          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
+          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
+          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
+          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
+          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
+          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
+          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
+          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
+          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
+          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
+          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
+        </div>
+
+<!--        drag-->
+        <div class="media-lib__drag">
+          <p>Drop files to upload</p>
+          <p>or</p>
+          <label class="media-lib__drag_label">
+            <input type="file" placeholder="">Select Files
+          </label>
+        </div>
+
+        <div class="btn-block-foot">
+          <button class="btn-main">Insert</button>
+        </div>
+
 
       </div>
+
     </div>
   </main>
 
