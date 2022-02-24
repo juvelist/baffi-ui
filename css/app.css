@@ -1093,6 +1093,36 @@ body.scroll-off {
     object-fit: cover;
     width: 100%; }
 
+.profile-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  border-left: 10px solid #F37037;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 32px;
+  width: 100%; }
+  .profile-card__title {
+    color: #454E5D;
+    font: 700 32px helvetica-neue-bold, sans-serif;
+    margin-bottom: 24px; }
+  .profile-card__action {
+    border-bottom: 1px solid #E3E3E3;
+    color: #000000;
+    cursor: pointer;
+    font: 400 20px/44px helvetica-neue-regular, sans-serif;
+    height: 44px;
+    margin-bottom: 16px;
+    transition: all .4s ease;
+    background-image: url("../img/icons/chevron-right-grey.svg");
+    background-position: right center;
+    background-repeat: no-repeat; }
+    .profile-card__action:hover {
+      background-image: url("../img/icons/chevron-right-orange.svg"); }
+  .profile-card__desc {
+    color: #454E5D;
+    font: 400 16px/22px helvetica-neue-regular, sans-serif; }
+    .profile-card__desc:not(:first-child) {
+      margin-top: 18px; }
+
 .profile {
   display: flex;
   justify-content: space-between; }
@@ -1113,7 +1143,6 @@ body.scroll-off {
       font: 400 24px/56px helvetica-neue-regular, sans-serif;
       height: 56px;
       margin-bottom: 16px;
-      position: relative;
       transition: all .4s ease; }
       @media screen and (max-width: 1280px) {
         .profile .profile-nav__item {
@@ -1133,9 +1162,7 @@ body.scroll-off {
         display: flex;
         justify-content: space-between; }
   .profile .profile-content {
-    flex: 1;
-    height: 400px;
-    background: lightcoral; }
+    flex: 1; }
 
 .media-item {
   display: flex;
