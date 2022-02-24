@@ -471,6 +471,47 @@ body.scroll-off {
   transition: all .3s ease;
   width: 100%; }
 
+.switcher {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 31px; }
+  .switcher input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+    .switcher input:checked + .slider {
+      background-color: #F37037; }
+    .switcher input:focus + .slider {
+      box-shadow: 0 0 1px #F37037; }
+    .switcher input:checked + .slider:before {
+      -webkit-transform: translateX(19px);
+      -ms-transform: translateX(19px);
+      transform: translateX(19px); }
+  .switcher .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15), 0 3px 1px rgba(0, 0, 0, 0.06); }
+    .switcher .slider:before {
+      position: absolute;
+      content: "";
+      height: 27px;
+      width: 27px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 50%; }
+
 .login {
   background: #FFFFFF;
   border-radius: 50px 0 0 0;
@@ -1051,6 +1092,50 @@ body.scroll-off {
     height: 100%;
     object-fit: cover;
     width: 100%; }
+
+.profile {
+  display: flex;
+  justify-content: space-between; }
+  .profile .profile-nav {
+    flex: 0 1 460px;
+    margin-right: 120px; }
+    @media screen and (max-width: 1280px) {
+      .profile .profile-nav {
+        flex: 0 1 360px;
+        margin-right: 60px; } }
+    .profile .profile-nav__list {
+      display: flex;
+      flex-direction: column; }
+    .profile .profile-nav__item {
+      border-bottom: 1px solid #E3E3E3;
+      color: #000000;
+      cursor: pointer;
+      font: 400 24px/56px helvetica-neue-regular, sans-serif;
+      height: 56px;
+      margin-bottom: 16px;
+      position: relative;
+      transition: all .4s ease; }
+      @media screen and (max-width: 1280px) {
+        .profile .profile-nav__item {
+          height: 48px;
+          line-height: 48px;
+          margin-bottom: 12px; } }
+      .profile .profile-nav__item:not(.notify) {
+        background-image: url("../img/icons/chevron-right-grey.svg");
+        background-position: right center;
+        background-repeat: no-repeat; }
+        .profile .profile-nav__item:not(.notify).active, .profile .profile-nav__item:not(.notify):hover {
+          background-image: url("../img/icons/chevron-right-orange.svg"); }
+        .profile .profile-nav__item:not(.notify).active {
+          font: 700 24px/56px helvetica-neue-bold, sans-serif; }
+      .profile .profile-nav__item.notify {
+        align-items: center;
+        display: flex;
+        justify-content: space-between; }
+  .profile .profile-content {
+    flex: 1;
+    height: 400px;
+    background: lightcoral; }
 
 .media-item {
   display: flex;

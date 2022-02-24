@@ -116,7 +116,7 @@
       <div class="header__content">
         <h1 class="header__title">BAFFI</h1>
 
-        <h2 class="header__subtitle">Media library</h2>
+        <h2 class="header__subtitle">Profile settings</h2>
         <form action="" style="display: none;">
           <label class="header__input-label">
             <input type="text" class="header__input" placeholder="Where would you like to go?">
@@ -270,16 +270,40 @@
             <input type="file" placeholder="">Select Files
           </label>
         </div>
-
         <div class="btn-block-foot">
           <button class="btn-main">Insert</button>
         </div>
+      </div>
 
+<!--      profile-->
+      <div class="profile">
+<!--        profile nav-->
+        <div class="profile-nav">
+          <ul class="profile-nav__list">
+            <li class="profile-nav__item">Personal data</li>
+            <li class="profile-nav__item">Security</li>
+            <li class="profile-nav__item">Baffi Cloud</li>
+            <li class="profile-nav__item active">Inbox</li>
+            <li class="profile-nav__item">Wallet</li>
+            <li class="profile-nav__item">Help</li>
+            <li class="profile-nav__item">Legal</li>
+            <li class="profile-nav__item">About</li>
+            <li class="profile-nav__item notify">Notifications
 
+<!--              switcher-->
+              <label class="switcher">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+
+            </li>
+          </ul>
+        </div>
+        <div class="profile-content"></div>
       </div>
 
 <!--      media item-->
-      <div class="media-item">
+      <div class="media-item" style="display: none;">
 <!--        media-->
         <div class="media-item__media">
           <div class="media-item__media_img-wrap"><img src="img/media.jpg" class="media-item__media_img" alt=""></div>
