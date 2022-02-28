@@ -329,10 +329,98 @@
             <p class="profile-card__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
           </section>
 <!--          Content policy-->
-          <section class="profile-card">
+          <section class="profile-card" style="display: none;">
             <h3 class="profile-card__title">Content policy</h3>
             <p class="profile-card__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
             <p class="profile-card__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          </section>
+<!--          About-->
+          <section class="profile-card" style="display: none;">
+            <h3 class="profile-card__title">About</h3>
+            <p class="profile-card__subtitle">Baffi version</p>
+            <p class="profile-card__about">6.1.0</p>
+            <p class="profile-card__subtitle">Baffi storage</p>
+            <p class="profile-card__about">2 GB</p>
+          </section>
+<!--          Wallet-->
+          <section class="profile-card" style="display: none;">
+            <h3 class="profile-card__title">Wallet</h3>
+            <p class="profile-card__about">Payment method : <img class="profile-card__paypal-icon" src="img/paypal.png" alt="PayPal icon">
+              <label class="profile-card__checkbox-label">
+                <input type="checkbox" class="profile-card__checkbox">
+              </label>
+            </p>
+            <p class="profile-card__about">Currency: <span class="profile-card__cur">€</span></p>
+          </section>
+<!--          Inbox-->
+          <section class="profile-card" style="display: none;">
+            <h3 class="profile-card__title">Inbox</h3>
+            <p class="profile-card__inbox">Your tour “Florence at night” is under review<span class="profile-card__cancel"></span></p>
+            <p class="profile-card__inbox">Your tour “Florence at night” was accepted by the admin<span class="profile-card__cancel"></span></p>
+            <p class="profile-card__inbox">Your tour “Sightseeings of Florence” was denied by the admin<span class="profile-card__cancel"></span></p>
+          </section>
+<!--          Personal data-->
+          <section class="profile-card">
+            <div class="profile-data">
+              <div class="profile-data__avatar-block">
+                <div class="profile-data__avatar">
+                  <span class="profile-data__avatar_add"></span>
+                </div>
+              </div>
+              <form class="profile-data__data">
+                <label class="profile-data__data_label">
+                  <input type="text" class="profile-data__data_input" name="name" placeholder="Name" value="Paolo">
+                  <span class="profile-data__data_edit"></span>
+                </label>
+                <label class="profile-data__data_label">
+                  <input type="text" class="profile-data__data_input" name="surname" placeholder="Surname" value="Conti">
+                  <span class="profile-data__data_edit"></span>
+                </label>
+                <label class="profile-data__data_label">
+                  <input type="text" class="profile-data__data_input" name="email" placeholder="Lorem@Ipsum.com">
+                  <span class="profile-data__data_edit"></span>
+                </label>
+                <label class="profile-data__data_label">
+                  <input type="text" class="profile-data__data_input" name="mobile" placeholder="Mobile number">
+                  <span class="profile-data__data_edit"></span>
+                </label>
+                <label class="profile-data__data_label">
+                  <input type="text" class="profile-data__data_input" name="country" placeholder="Country">
+                  <span class="profile-data__data_chevron"></span>
+                </label>
+                <label class="profile-data__data_label">
+                  <input type="text" class="profile-data__data_input" name="address" placeholder="Address">
+                  <span class="profile-data__data_edit"></span>
+                </label>
+                <label class="profile-data__data_label">
+                  <input type="text" class="profile-data__data_input" name="address2" placeholder="Address 2 (optional)">
+                  <span class="profile-data__data_edit"></span>
+                </label>
+                <label class="profile-data__data_label">
+                  <input type="text" class="profile-data__data_input" name="city" placeholder="City">
+                  <span class="profile-data__data_edit"></span>
+                </label>
+                <label class="profile-data__data_label">
+                  <input type="text" class="profile-data__data_input" name="code" placeholder="Postal Code">
+                  <span class="profile-data__data_edit"></span>
+                </label>
+                <label class="profile-data__data_label">
+                  <input type="text" class="profile-data__data_input" name="state" placeholder="State/Province">
+                  <span class="profile-data__data_chevron"></span>
+                </label>
+                <label class="profile-data__data_label">
+                  <input type="text" class="profile-data__data_input" name="tax" placeholder="Tax ID">
+                  <span class="profile-data__data_edit"></span>
+                </label>
+                <label class="profile-data__data_label">
+                  <input type="text" class="profile-data__data_input" name="about" placeholder="About me">
+                  <span class="profile-data__data_edit"></span>
+                </label>
+                <textarea class="profile-data__data_textarea" cols="10" rows="1" placeholder="Hello, I am!"></textarea>
+                <textarea class="profile-data__data_textarea" cols="10" rows="6" placeholder="Hello, I am!"></textarea>
+                <button class="btn-main disabled">Save</button>
+              </form>
+            </div>
           </section>
 
         </div>

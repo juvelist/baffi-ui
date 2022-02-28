@@ -918,7 +918,166 @@ body {
       margin-top: 18px;
     }
   }
+  &__subtitle {
+    color: $colorBlack;
+    font: 400 14px/22px helvetica-neue-regular, sans-serif;
+  }
+  &__about {
+    border-bottom: 1px solid #E3E3E3;
+    color: $colorBlack;
+    font: 400 20px/44px helvetica-neue-regular, sans-serif;
+    margin-bottom: 16px;
+    padding-right: 32px;
+    position: relative;
+  }
+  &__paypal-icon {
+    height: 29px;
+    vertical-align: middle;
+    width: 108px;
+  }
+  &__checkbox-label {
+    align-items: center;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    margin: auto 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &__checkbox {
+    appearance: auto;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+  &__cur {
+    font-size: 22px;
+  }
+  &__inbox {
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    color: $colorDark;
+    font: 400 16px helvetica-neue-regular, sans-serif;
+    padding: 16px 30px 16px 16px;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  &__cancel {
+    background: no-repeat center/contain url('../img/icons/cancel.svg');
+    cursor: pointer;
+    height: 8px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 8px;
+    transition: transform .2s ease;
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
 }
+.profile-data {
+  display: flex;
+  &__avatar-block {
+    flex: 0 1 104px;
+    margin-right: 30px;
+  }
+  &__avatar {
+    aspect-ratio: 1;
+    background: no-repeat center url('../img/icons/profile.png') #DADADA;
+    border-radius: 50%;
+    position: relative;
+    width: 100%;
+    &_add {
+      background: $colorOrange;
+      border-radius: 50%;
+      border: 1px solid $colorWhite;
+      bottom: 5%;
+      cursor: pointer;
+      height: 17px;
+      position: absolute;
+      right: 5%;
+      width: 17px;
+      transition: transform .2s ease;
+      &:hover {
+        transform: rotate(90deg);
+      }
+      &:after,
+      &:before {
+        background: $colorWhite;
+        content: '';
+        position: absolute;
+      }
+      &:after {
+        height: 1px;
+        left: 3px;
+        top: 7px;
+        width: 9px;
+      }
+      &:before {
+        height: 9px;
+        left: 7px;
+        top: 3px;
+        width: 1px;
+      }
+    }
+  }
+  &__data {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    &_label {
+      border-bottom: 1px solid #E5E5E5;
+      height: 44px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    &_input {
+      color: $colorBlack;
+      font: 400 19px/40px helvetica-neue-regular, sans-serif;
+    }
+    &_edit {
+      background: no-repeat center/contain url('../img/icons/edit.svg');
+      bottom: 0;
+      cursor: pointer;
+      height: 16px;
+      margin: auto 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 16px;
+    }
+    &_chevron {
+      background: no-repeat center/contain url('../img/icons/chevron-down.svg');
+      bottom: 0;
+      cursor: pointer;
+      height: 10px;
+      margin: auto 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 16px;
+    }
+    &_textarea {
+      border: 1px solid #E5E5E5;
+      margin-bottom: 8px;
+      padding: 10px 32px 10px 16px;
+      resize: none;
+    }
+  }
+  .btn-main {
+    margin-top: 32px;
+    width: 100%;
+    &.disabled {
+      background: $backGrey;
+    }
+  }
+}
+
 .profile {
   display: flex;
   justify-content: space-between;
@@ -964,12 +1123,10 @@ body {
         display: flex;
         justify-content: space-between;
       }
-
     }
   }
   .profile-content {
     flex: 1;
-
   }
 }
 
