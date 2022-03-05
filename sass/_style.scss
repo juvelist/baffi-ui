@@ -618,14 +618,14 @@ body {
   display: block;
   height: 188px;
   margin-right: 20px;
-  overflow: hidden;
   position: relative;
   width: 174px;
   @media screen and (max-width: 1440px) {
     height: 174px;
   }
-  &:before {
+  &:not(.card__add):before {
     background: linear-gradient(178.47deg, rgba(0, 0, 0, 0) 69.85%, #000000 98.7%);
+    border-radius: 10px;
     bottom: 0;
     content: '';
     height: 100%;
@@ -644,7 +644,6 @@ body {
     padding: 9px;
     position: relative;
     width: 100%;
-    z-index: 1;
   }
   &__location {
     font: 400 12px helvetica-neue-regular, sans-serif;
@@ -867,6 +866,17 @@ body {
   top: 20px;
   width: 60px;
   z-index: 1;
+  &.bell {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    & > img {
+      height: 32px;
+      width: 32px;
+    }
+  }
   @media screen and (max-width: 1440px) {
     right: 100px;
   }
@@ -1130,6 +1140,224 @@ body {
   }
 }
 
+// profile-full
+.profile-full {
+  // header
+  &__header {
+    background-color: $colorWhite;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 280px;
+    transform: translateY(-40px);
+    z-index: 2;
+    @media screen and (max-width: 1440px) {
+      transform: translateY(-80px);
+    }
+  }
+  &__header-info {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 1 55%;
+    transform: translateY(-80px);
+    @media screen and (max-width: 1200px) {
+      flex-basis: 80%;
+    }
+  }
+  &__avatar {
+    aspect-ratio: 1;
+    background: no-repeat center url('../img/icons/profile.png') #DADADA;
+    border: 5px solid $colorWhite;
+    border-radius: 50%;
+    flex: 1 0 172px;
+    margin-right: 26px;
+    overflow: hidden;
+  }
+  &_img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__title {
+    color: $colorWhite;
+    font: 700 32px/3 helvetica-neue-bold, sans-serif;
+  }
+  &__desc {
+    color: $colorDark;
+    font: 400 20px/1.2 helvetica-neue-regular, sans-serif;
+  }
+
+  &__header-price {
+    flex: 0 1 400px;
+    padding-top: 16px;
+    display: grid;
+    grid-column-gap: 60px;
+    grid-template-columns: repeat(2, max-content);
+    @media screen and (max-width: 1200px) {
+      justify-content: flex-end;
+      & > div {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
+  }
+  &__price-btn {
+    align-items: flex-end;
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-content: flex-end;
+  }
+  &__subtitle {
+    color: $colorDark;
+    font: 400 16px helvetica-neue-regular, sans-serif;
+    margin-bottom: 16px;
+  }
+  &__price {
+    color: $colorDark;
+    font: 700 16px helvetica-neue-bold, sans-serif;
+  }
+  &__rate {
+    display: flex;
+  }
+  &__star {
+    margin-right: 8px;
+    &.active > svg > path {
+      shape-rendering: crispEdges;
+      fill: url(#MyGradient);
+    }
+  }
+
+  // content
+  &__content {
+    .home__section {
+      margin-bottom: 36px;
+      .card__dots {
+        display: none;
+      }
+
+      // more popup
+      &.published {
+        .card {
+          overflow: unset;
+          &__add {
+            background: linear-gradient(90deg, #F8D948 17%, #FFA900 89%);
+            display: flex;
+            flex-direction: column;
+            &_default {
+              flex: 1;
+              background: no-repeat center url('../img/b.png');
+            }
+            &_btn {
+              align-items: center;
+              border-radius: 0 0 10px 10px;
+              cursor: pointer;
+              background-color: $colorWhite;
+              display: flex;
+              height: 36px;
+              justify-content: center;
+              transition: all .3s ease;
+              &:before {
+                background: no-repeat center url('../img/icons/edit_24.svg');
+                content: '';
+                margin-right: 8px;
+                height: 24px;
+                width: 24px;
+              }
+              &:hover {
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+              }
+            }
+          }
+          &__more {
+            height: 32px;
+            position: absolute;
+            right: 8px;
+            top: 4px;
+            width: 8px;
+            &:hover .card__more-popup {
+              display: block;
+            }
+          }
+          &__more-popup {
+            background-color: $colorWhite;
+            display: none;
+            top: -24px;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+            left: 20px;
+            position: absolute;
+            min-width: 220px;
+            z-index: 4;
+            &_item {
+              background-position: 6% 50%;
+              background-repeat: no-repeat;
+              color: $colorDark;
+              font: 400 18px helvetica-neue-regular, sans-serif;
+              padding: 18px 50px;
+              position: relative;
+              transition: all .2s ease;
+              &:not(:last-child) {
+                border-bottom: 1px solid #E8EEF4;
+              }
+              &.edit {
+                background-image: url('../img/icons/edit_24.svg');
+              }
+              &.clone {
+                background-image: url('../img/icons/clone_24.svg');
+              }
+              &.delete {
+                background-image: url('../img/icons/delete_24.svg');
+              }
+              &:hover {
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+              }
+            }
+            &:before {
+              border-style: solid;
+              border-width: 15px 15px 15px 0;
+              border-color: transparent $backMain transparent transparent;
+              top: 10px;
+              content: '';
+              height: 0;
+              left: -10px;
+              position: absolute;
+              width: 0;
+            }
+          }
+          &__dots {
+            position: relative;
+            right: 2px;
+            top: 14px;
+            z-index: 1;
+            &.dot {
+              background-color: $colorWhite;
+              border-radius: 50%;
+              display: block;
+              height: 4px;
+              width: 4px;
+            }
+            &:before,
+            &:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+              @extend .dot
+            }
+            &:before {
+              top: -8px;
+            }
+            &:after {
+              bottom: -8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 
 

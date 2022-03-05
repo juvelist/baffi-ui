@@ -116,7 +116,7 @@
       <div class="header__content">
         <h1 class="header__title">BAFFI</h1>
 
-        <h2 class="header__subtitle">Profile settings</h2>
+        <h2 class="header__subtitle" style="display: none;">Profile settings</h2>
         <form action="" style="display: none;">
           <label class="header__input-label">
             <input type="text" class="header__input" placeholder="Where would you like to go?">
@@ -125,7 +125,8 @@
         </form>
       </div>
       
-      <div class="avatar"><img src="img/avatar.jpg" class="avatar__img" alt=""></div>
+      <div class="avatar" style="display: none;"><img src="img/avatar.jpg" class="avatar__img" alt=""></div>
+      <div class="avatar bell"><img src="img/icons/bell.svg" class="avatar__img" alt=""></div>
     </header>
 
 <!--    content-->
@@ -276,7 +277,7 @@
       </div>
 
 <!--      profile-->
-      <div class="profile">
+      <div class="profile" style="display: none;">
 <!--        profile nav-->
         <div class="profile-nav">
           <ul class="profile-nav__list">
@@ -360,7 +361,7 @@
             <p class="profile-card__inbox">Your tour “Sightseeings of Florence” was denied by the admin<span class="profile-card__cancel"></span></p>
           </section>
 <!--          Personal data-->
-          <section class="profile-card">
+          <section class="profile-card" style="display: none;">
             <div class="profile-data">
               <div class="profile-data__avatar-block">
                 <div class="profile-data__avatar">
@@ -426,8 +427,6 @@
         </div>
       </div>
 
-
-
 <!--      media item-->
       <div class="media-item" style="display: none;">
 <!--        media-->
@@ -453,6 +452,237 @@
           </label>
           <label class="media-item__data_info label">File URL: <input type="text" value="https://baffi.me"></label>
         </div>
+      </div>
+
+
+<!--      profile-full-->
+      <div class="profile-full">
+        <div class="profile-full__header">
+          <div class="profile-full__header-info">
+            <div class="profile-full__avatar">
+              <img class="profile-full__img" src="img/avatar.jpg" alt="profile photo">
+            </div>
+            <div>
+              <h3 class="profile-full__title" style="display: none;">Hello</h3>
+              <h3 class="profile-full__title">Hello, I am <span>Paolo</span>!</h3>
+              <p class="profile-full__desc">I was born and raised in Florence, Italy and have been a local certified guide here since 2015. I am very happy to share with you my experiences and unique local knowledge that you will never find in the standard guide books.<p>
+            </div>
+          </div>
+          <div class="profile-full__header-price">
+            <div>
+              <p class="profile-full__subtitle">Your current tour rating:</p>
+              <ul class="profile-full__rate">
+                <li class="profile-full__star active">
+                  <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 15.3627L5.11742 17.7821C4.0343 18.3187 3.32446 17.8295 3.53081 16.6956L4.46331 11.5714L0.513185 7.9424C-0.363072 7.13738 -0.0887745 6.34993 1.11921 6.18449L6.57816 5.43688L9.01947 0.774707C9.56102 -0.259503 10.4404 -0.256967 10.9806 0.774707L13.4219 5.43688L18.8809 6.18449C20.0918 6.35034 20.361 7.13935 19.4869 7.9424L15.5368 11.5714L16.4693 16.6956C16.6761 17.8323 15.9631 18.3174 14.8827 17.7821L10 15.3627Z" fill="#E5E5E5"/>
+                    <defs>
+                      <linearGradient id="MyGradient">
+                        <stop offset="5%" stop-color="#F8D948" />
+                        <stop offset="95%" stop-color="#FFA900" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </li>
+                <li class="profile-full__star active">
+                  <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 15.3627L5.11742 17.7821C4.0343 18.3187 3.32446 17.8295 3.53081 16.6956L4.46331 11.5714L0.513185 7.9424C-0.363072 7.13738 -0.0887745 6.34993 1.11921 6.18449L6.57816 5.43688L9.01947 0.774707C9.56102 -0.259503 10.4404 -0.256967 10.9806 0.774707L13.4219 5.43688L18.8809 6.18449C20.0918 6.35034 20.361 7.13935 19.4869 7.9424L15.5368 11.5714L16.4693 16.6956C16.6761 17.8323 15.9631 18.3174 14.8827 17.7821L10 15.3627Z" fill="#E5E5E5"/>
+                  </svg>
+                </li>
+                <li class="profile-full__star active">
+                  <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 15.3627L5.11742 17.7821C4.0343 18.3187 3.32446 17.8295 3.53081 16.6956L4.46331 11.5714L0.513185 7.9424C-0.363072 7.13738 -0.0887745 6.34993 1.11921 6.18449L6.57816 5.43688L9.01947 0.774707C9.56102 -0.259503 10.4404 -0.256967 10.9806 0.774707L13.4219 5.43688L18.8809 6.18449C20.0918 6.35034 20.361 7.13935 19.4869 7.9424L15.5368 11.5714L16.4693 16.6956C16.6761 17.8323 15.9631 18.3174 14.8827 17.7821L10 15.3627Z" fill="#E5E5E5"/>
+                  </svg>
+                </li>
+                <li class="profile-full__star">
+                  <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 15.3627L5.11742 17.7821C4.0343 18.3187 3.32446 17.8295 3.53081 16.6956L4.46331 11.5714L0.513185 7.9424C-0.363072 7.13738 -0.0887745 6.34993 1.11921 6.18449L6.57816 5.43688L9.01947 0.774707C9.56102 -0.259503 10.4404 -0.256967 10.9806 0.774707L13.4219 5.43688L18.8809 6.18449C20.0918 6.35034 20.361 7.13935 19.4869 7.9424L15.5368 11.5714L16.4693 16.6956C16.6761 17.8323 15.9631 18.3174 14.8827 17.7821L10 15.3627Z" fill="#E5E5E5"/>
+                  </svg>
+                </li>
+                <li class="profile-full__star">
+                  <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 15.3627L5.11742 17.7821C4.0343 18.3187 3.32446 17.8295 3.53081 16.6956L4.46331 11.5714L0.513185 7.9424C-0.363072 7.13738 -0.0887745 6.34993 1.11921 6.18449L6.57816 5.43688L9.01947 0.774707C9.56102 -0.259503 10.4404 -0.256967 10.9806 0.774707L13.4219 5.43688L18.8809 6.18449C20.0918 6.35034 20.361 7.13935 19.4869 7.9424L15.5368 11.5714L16.4693 16.6956C16.6761 17.8323 15.9631 18.3174 14.8827 17.7821L10 15.3627Z" fill="#E5E5E5"/>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="profile-full__subtitle">Your current tour rating:</p>
+              <p class="profile-full__price">€500.00</p>
+            </div>
+            <div class="profile-full__price-btn">
+              <button class="btn-main">Add Tour</button>
+            </div>
+          </div>
+        </div>
+
+<!--      profile-full content-->
+        <div class="profile-full__content">
+
+          <!--section-->
+          <section class="home__section published">
+            <h2 class="home__title">My published tours</h2>
+            <div class="home__wrapper">
+              <!--card-->
+              <div class="card card__add">
+                <div class="card__add_default"></div>
+                <div class="card__add_btn">
+                  Add Tour
+                </div>
+              </div>
+              <a href="#" class="card" style="background-image: url('img/card-background.jpg')">
+                <div class="card__wrapper">
+<!--                  more popup-->
+                  <div class="card__more">
+                    <div class="card__dots dot">
+                      <div class="card__more-popup">
+                        <p class="card__more-popup_item edit">Edit the tour</p>
+                        <p class="card__more-popup_item clone">Clone the tour</p>
+                        <p class="card__more-popup_item delete">Delete the tour</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card__location">Italiano</p>
+                  <div class="card__content">
+                    <div>
+                      <h3 class="card__title">Florence at night</h3>
+                      <p class="card__price">€80.00</p>
+                      <p class="card__time">1.5 hours</p>
+                    </div>
+                    <div class="card__rate-section">
+                      <img src="img/icons/man.svg" class="card__icon" alt="icon">
+                      <p class="card__rate">4.5</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!--card-->
+              <a href="#" class="card" style="background-image: url('img/card-background.jpg')">
+                <div class="card__wrapper">
+<!--                  more popup-->
+                  <div class="card__more">
+                    <div class="card__dots dot">
+                      <div class="card__more-popup">
+                        <p class="card__more-popup_item edit">Edit the tour</p>
+                        <p class="card__more-popup_item clone">Clone the tour</p>
+                        <p class="card__more-popup_item delete">Delete the tour</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card__location">Italiano</p>
+                  <div class="card__content">
+                    <div>
+                      <h3 class="card__title">Florence at night</h3>
+                      <p class="card__price">€80.00</p>
+                      <p class="card__time">1.5 hours</p>
+                    </div>
+                    <div class="card__rate-section">
+                      <img src="img/icons/man.svg" class="card__icon" alt="icon">
+                      <p class="card__rate">4.5</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <!--section-->
+          <section class="home__section">
+            <h2 class="home__title">My draft tours    </h2>
+            <div class="home__wrapper">
+              <!--card-->
+              <a href="#" class="card" style="background-image: url('img/card-background.jpg')">
+                <div class="card__wrapper">
+                  <p class="card__location">Italiano</p>
+                  <div class="card__content">
+                    <div>
+                      <h3 class="card__title">Florence at night</h3>
+                      <p class="card__price">€80.00</p>
+                      <p class="card__time">1.5 hours</p>
+                    </div>
+                    <div class="card__rate-section">
+                      <img src="img/icons/man.svg" class="card__icon" alt="icon">
+                      <p class="card__rate">4.5</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!--card-->
+              <a href="#" class="card" style="background-image: url('img/card-background.jpg')">
+                <div class="card__wrapper">
+                  <p class="card__location">Italiano</p>
+                  <div class="card__content">
+                    <div>
+                      <h3 class="card__title">Florence at night</h3>
+                      <p class="card__price">€80.00</p>
+                      <p class="card__time">1.5 hours</p>
+                    </div>
+                    <div class="card__rate-section">
+                      <img src="img/icons/man.svg" class="card__icon" alt="icon">
+                      <p class="card__rate">4.5</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <!--section-->
+          <section class="home__section">
+            <h2 class="home__title">Under Review    </h2>
+            <div class="home__wrapper">
+              <!--card-->
+              <a href="#" class="card" style="background-image: url('img/card-background.jpg')">
+                <div class="card__wrapper">
+                  <p class="card__location">Italiano</p>
+                  <div class="card__content">
+                    <div>
+                      <h3 class="card__title">Florence at night</h3>
+                      <p class="card__price">€80.00</p>
+                      <p class="card__time">1.5 hours</p>
+                    </div>
+                    <div class="card__rate-section">
+                      <img src="img/icons/man.svg" class="card__icon" alt="icon">
+                      <p class="card__rate">4.5</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!--card-->
+              <a href="#" class="card" style="background-image: url('img/card-background.jpg')">
+                <div class="card__wrapper">
+                  <p class="card__location">Italiano</p>
+                  <div class="card__content">
+                    <div>
+                      <h3 class="card__title">Florence at night</h3>
+                      <p class="card__price">€80.00</p>
+                      <p class="card__time">1.5 hours</p>
+                    </div>
+                    <div class="card__rate-section">
+                      <img src="img/icons/man.svg" class="card__icon" alt="icon">
+                      <p class="card__rate">4.5</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </section>
+
+        </div>
+
+
+
+
+<!--        &lt;!&ndash;        drag&ndash;&gt;-->
+<!--        <div class="profile-full__drag">-->
+<!--          <p>Drop files to upload</p>-->
+<!--          <p>or</p>-->
+<!--          <label class="profile-full__drag_label">-->
+<!--            <input type="file" placeholder="">Select Files-->
+<!--          </label>-->
+<!--        </div>-->
+<!--        <div class="btn-block-foot">-->
+<!--          <button class="btn-main">Insert</button>-->
+<!--        </div>-->
       </div>
 
     </div>
