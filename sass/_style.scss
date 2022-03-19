@@ -22,7 +22,7 @@ body {
 }
 
 .btn-main {
-  background: linear-gradient(91.91deg, #F8D948 16.57%, #FFA900 88.43%);
+  background: $backGold;
   border-radius: 8px;
   color: #454E5D;
   font: 700 16px helvetica-neue-bold, sans-serif;
@@ -92,7 +92,7 @@ body {
     }
   }
   &__button {
-    background: linear-gradient(91.91deg, #F8D948 16.57%, #FFA900 88.43%);
+    background: $backGold;
     &:hover {
       opacity: .9;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
@@ -308,7 +308,7 @@ body {
   &__button {
     background: $backGrey;
     &.active {
-      background: linear-gradient(91.91deg, #F8D948 16.57%, #FFA900 88.43%);
+      background: $backGold;
       &:hover {
         opacity: .9;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
@@ -820,7 +820,30 @@ body {
     aspect-ratio: 1;
     background-color: $backMain;
     border-radius: 8px;
+    cursor: pointer;
     overflow: hidden;
+    position: relative;
+    &.audio:before,
+    &.video:before {
+      content: '';
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &.audio {
+      background: $backGold;
+      &:before {
+        background: no-repeat center/contain url('../img/icons/mic.svg');
+        height: 52px;
+        width: 53px;
+      }
+    }
+    &.video:before {
+      background: no-repeat center/contain url('../img/icons/play-small.svg');
+      height: 24px;
+      width: 26px;
+    }
     &_img {
       object-fit: cover;
       height: 100%;
@@ -1241,7 +1264,7 @@ body {
         .card {
           overflow: unset;
           &__add {
-            background: linear-gradient(90deg, #F8D948 17%, #FFA900 89%);
+            background: $backGold;
             display: flex;
             flex-direction: column;
             &_default {

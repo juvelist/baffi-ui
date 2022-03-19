@@ -116,7 +116,7 @@
       <div class="header__content">
         <h1 class="header__title">BAFFI</h1>
 
-        <h2 class="header__subtitle" style="display: none;">Profile settings</h2>
+        <h2 class="header__subtitle">Baffi Cloud</h2>
         <form action="" style="display: none;">
           <label class="header__input-label">
             <input type="text" class="header__input" placeholder="Where would you like to go?">
@@ -126,7 +126,7 @@
       </div>
       
       <div class="avatar" style="display: none;"><img src="img/avatar.jpg" class="avatar__img" alt=""></div>
-      <div class="avatar bell"><img src="img/icons/bell.svg" class="avatar__img" alt=""></div>
+      <div class="avatar bell" style="display: none;"><img src="img/icons/bell.svg" class="avatar__img" alt=""></div>
     </header>
 
 <!--    content-->
@@ -225,7 +225,7 @@
       </div>
 
 <!--      media library-->
-      <div class="media-lib" style="display: none;">
+      <div class="media-lib">
         <div class="media-lib__header">
 <!--          select-->
           <div class="media-lib__select" id="mediaLibSelect">
@@ -251,8 +251,8 @@
         <div class="media-lib__content">
           <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
           <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
-          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
-          <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
+          <div class="media-lib__card audio"></div>
+          <div class="media-lib__card video"><img src="img/video-background.png" class="media-lib__card_img" alt=""></div>
           <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
           <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
           <div class="media-lib__card"><img src="img/card-background.jpg" class="media-lib__card_img" alt=""></div>
@@ -454,9 +454,8 @@
         </div>
       </div>
 
-
 <!--      profile-full-->
-      <div class="profile-full">
+      <div class="profile-full" style="display: none;">
         <div class="profile-full__header">
           <div class="profile-full__header-info">
             <div class="profile-full__avatar">
@@ -726,7 +725,7 @@
 <!--  modal-->
   <div class="smooth-wrapper">
     <div class="modal">
-      <p class="modal__desc">Please, verify your e-mail. </p>
+      <p class="modal__desc">Please, verify your e-mail.</p>
       <button class="modal__resend">Resend e-mail</button>
       <button class="modal__button home-btn">Sign In</button>
     </div>
