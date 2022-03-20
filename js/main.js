@@ -32,3 +32,52 @@ mediaLibSelect.addEventListener("click", function (){
 });
 
 
+// audio
+let mediaLibAudio = document.getElementById('mediaLibAudio');
+let mediaLibAudioEl = document.getElementById('mediaLibAudioEl');
+
+function playAudio() {
+  if (mediaLibAudioEl.paused) {
+    mediaLibAudio.classList.add('play');
+    mediaLibAudioEl.play();
+  } else {
+    mediaLibAudio.classList.remove('play');
+    mediaLibAudioEl.pause();
+    mediaLibAudioEl.currentTime = 0;
+  }
+}
+mediaLibAudio.addEventListener("click", playAudio);
+
+// video
+let mediaLibVideo = document.getElementById('mediaLibVideo');
+let mediaLibVideoEl = document.getElementById('mediaLibVideoEl');
+
+function playVideo() {
+  if (mediaLibVideoEl.paused) {
+    mediaLibVideo.classList.add('play');
+    mediaLibVideoEl.play();
+  } else {
+    mediaLibVideo.classList.remove('play');
+    mediaLibVideoEl.pause();
+    mediaLibVideoEl.currentTime = 0;
+  }
+}
+mediaLibVideo.addEventListener("click", playVideo);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
