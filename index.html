@@ -115,8 +115,7 @@
     <header class="header smooth">
       <div class="header__content">
         <h1 class="header__title">BAFFI</h1>
-
-        <h2 class="header__subtitle">Baffi Cloud</h2>
+        <h2 class="header__subtitle">Add tour</h2>
         <form action="" style="display: none;">
           <label class="header__input-label">
             <input type="text" class="header__input" placeholder="Where would you like to go?">
@@ -125,14 +124,14 @@
         </form>
       </div>
       
-      <div class="avatar" style="display: none;"><img src="img/avatar.jpg" class="avatar__img" alt=""></div>
+      <div class="avatar"><img src="img/avatar.jpg" class="avatar__img" alt=""></div>
       <div class="avatar bell" style="display: none;"><img src="img/icons/bell.svg" class="avatar__img" alt=""></div>
     </header>
 
 <!--    content-->
     <div class="content">
 <!--      home-->
-      <div class="home">
+      <div class="home" style="display: none;">
 
         <!--section-->
         <section class="home__section">
@@ -729,6 +728,23 @@
 <!--        </div>-->
       </div>
 
+<!--      add-tour-->
+      <div class="add-tour">
+        <div class="add-tour__card"></div>
+        <div class="add-tour__btn-wrap">
+          <button class="btn-main disabled">Save Draft</button>
+          <button class="btn-main">Continue</button>
+        </div>
+        <div class="add-tour__steps">
+          <ul class="add-tour__steps_list">
+            <li class="add-tour__steps_item completed"></li>
+            <li class="add-tour__steps_item active"></li>
+            <li class="add-tour__steps_item"></li>
+            <li class="add-tour__steps_item"></li>
+            <li class="add-tour__steps_item"></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </main>
 

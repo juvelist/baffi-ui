@@ -32,9 +32,13 @@ body {
   text-align: center;
   transition: all .3s ease;
   width: 200px;
-  &:hover {
+  &:not(.disabled):hover {
     opacity: .9;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  }
+  &.disabled {
+    background: $backGrey;
+    cursor: default;
   }
 }
 
@@ -585,7 +589,7 @@ body {
   background-color: $backMain;
   min-height: calc(100vh - 240px);
   padding: 36px 150px 60px 50px;
-  @media screen and (max-width: 1460px) {
+  @media screen and (max-width: 1440px) {
     padding: 30px 100px 50px 50px;
   }
 }
@@ -923,11 +927,6 @@ body {
 }
 
 
-
-
-
-
-
 // profile
 .profile-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
@@ -1117,9 +1116,6 @@ body {
   .btn-main {
     margin-top: 32px;
     width: 100%;
-    &.disabled {
-      background: $backGrey;
-    }
   }
 }
 
@@ -1485,11 +1481,6 @@ body {
   }
 }
 
-
-
-
-
-
 // media item
 .media-item {
   display: flex;
@@ -1595,6 +1586,71 @@ body {
           width: 16px;
         }
       }
+    }
+  }
+}
+
+// add tour
+.add-tour {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 340px);
+  position: relative;
+  @media screen and (max-width: 1440px) {
+    min-height: calc(100vh - 300px);
+  }
+  &__card {
+    border-radius: 10px;
+    border-top: 20px solid $colorOrange;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 22px;
+    padding: 32px 0 48px;
+  }
+  &__steps {
+    position: absolute;
+    top: 50px;
+    right: -104px;
+    @media screen and (max-width: 1440px) {
+      right: -74px;
+    }
+    &_list {
+      list-style: none;
+    }
+    &_item {
+      border: 2px solid $backGrey;
+      border-radius: 50%;
+      height: 24px;
+      margin-bottom: 24px;
+      width: 24px;
+      &.completed {
+        border: 2px solid $colorOrange;
+        position: relative;
+        &:after {
+          background-color: $colorOrange;
+          border-radius: 50%;
+          content: '';
+          display: block;
+          height: 14px;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 14px;
+        }
+      }
+      &.active {
+        border: 2px solid $colorOrange;
+      }
+    }
+  }
+
+
+  &__btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    .btn-main {
+      margin-left: 22px;
     }
   }
 }

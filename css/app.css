@@ -406,9 +406,12 @@ body.scroll-off {
   text-align: center;
   transition: all .3s ease;
   width: 200px; }
-  .btn-main:hover {
+  .btn-main:not(.disabled):hover {
     opacity: .9;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12); }
+  .btn-main.disabled {
+    background: #E5E5E5;
+    cursor: default; }
 
 .container {
   display: flex; }
@@ -847,7 +850,7 @@ body.scroll-off {
   background-color: #FFFFFF;
   min-height: calc(100vh - 240px);
   padding: 36px 150px 60px 50px; }
-  @media screen and (max-width: 1460px) {
+  @media screen and (max-width: 1440px) {
     .content {
       padding: 30px 100px 50px 50px; } }
 
@@ -1290,8 +1293,6 @@ body.scroll-off {
   .profile-data .btn-main {
     margin-top: 32px;
     width: 100%; }
-    .profile-data .btn-main.disabled {
-      background: #E5E5E5; }
 
 .profile {
   display: flex;
@@ -1672,3 +1673,55 @@ body.scroll-off {
           position: absolute;
           top: 12px;
           width: 16px; }
+
+.add-tour {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 340px);
+  position: relative; }
+  @media screen and (max-width: 1440px) {
+    .add-tour {
+      min-height: calc(100vh - 300px); } }
+  .add-tour__card {
+    border-radius: 10px;
+    border-top: 20px solid #F37037;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 22px;
+    padding: 32px 0 48px; }
+  .add-tour__steps {
+    position: absolute;
+    top: 50px;
+    right: -104px; }
+    @media screen and (max-width: 1440px) {
+      .add-tour__steps {
+        right: -74px; } }
+    .add-tour__steps_list {
+      list-style: none; }
+    .add-tour__steps_item {
+      border: 2px solid #E5E5E5;
+      border-radius: 50%;
+      height: 24px;
+      margin-bottom: 24px;
+      width: 24px; }
+      .add-tour__steps_item.completed {
+        border: 2px solid #F37037;
+        position: relative; }
+        .add-tour__steps_item.completed:after {
+          background-color: #F37037;
+          border-radius: 50%;
+          content: '';
+          display: block;
+          height: 14px;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 14px; }
+      .add-tour__steps_item.active {
+        border: 2px solid #F37037; }
+  .add-tour__btn-wrap {
+    display: flex;
+    justify-content: flex-end; }
+    .add-tour__btn-wrap .btn-main {
+      margin-left: 22px; }
