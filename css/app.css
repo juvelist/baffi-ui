@@ -629,7 +629,9 @@ body.scroll-off {
     cursor: pointer;
     font: 400 12px helvetica-neue-regular, sans-serif; }
   .login-form__checkbox {
-    appearance: auto;
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
     display: inline-block;
     margin-right: 10px;
     vertical-align: top; }
@@ -858,8 +860,19 @@ body.scroll-off {
   margin-bottom: 18px; }
 
 .home__wrapper {
-  display: flex;
-  margin-bottom: 14px; }
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(8, minmax(173px, 1fr));
+  margin-bottom: 20px; }
+  @media screen and (max-width: 1680px) {
+    .home__wrapper {
+      grid-template-columns: repeat(6, minmax(173px, 1fr)); } }
+  @media screen and (max-width: 1440px) {
+    .home__wrapper {
+      grid-template-columns: repeat(5, minmax(173px, 1fr)); } }
+  @media screen and (max-width: 1200px) {
+    .home__wrapper {
+      grid-template-columns: repeat(4, minmax(173px, 1fr)); } }
 
 .home__more-wrap {
   display: flex;
@@ -870,15 +883,14 @@ body.scroll-off {
   font: 700 16px helvetica-neue-bold, sans-serif; }
 
 .card {
-  border-radius: 10px;
-  display: block;
-  height: 188px;
-  margin-right: 20px;
-  position: relative;
-  width: 174px; }
-  @media screen and (max-width: 1440px) {
-    .card {
-      height: 174px; } }
+  aspect-ratio: 1;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative; }
   .card:not(.card__add):before {
     background: linear-gradient(178.47deg, rgba(0, 0, 0, 0) 69.85%, #000000 98.7%);
     border-radius: 10px;
@@ -1045,7 +1057,7 @@ body.scroll-off {
 .media-lib__card {
   aspect-ratio: 1;
   background-color: #FFFFFF;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
   position: relative; }

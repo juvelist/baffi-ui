@@ -300,7 +300,9 @@ body {
     font: 400 12px helvetica-neue-regular, sans-serif;
   }
   &__checkbox {
-    appearance: auto;
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
     display: inline-block;
     margin-right: 10px;
     vertical-align: top;
@@ -599,8 +601,19 @@ body {
     margin-bottom: 18px;
   }
   &__wrapper {
-    display: flex;
-    margin-bottom: 14px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(8, minmax(173px, 1fr));
+    margin-bottom: 20px;
+    @media screen and (max-width: 1680px) {
+      grid-template-columns: repeat(6, minmax(173px, 1fr));
+    }
+    @media screen and (max-width: 1440px) {
+      grid-template-columns: repeat(5, minmax(173px, 1fr));
+    }
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: repeat(4, minmax(173px, 1fr));
+    }
   }
   &__more-wrap {
     display: flex;
@@ -614,15 +627,14 @@ body {
 
 //card
 .card {
-  border-radius: 10px;
-  display: block;
-  height: 188px;
-  margin-right: 20px;
+  aspect-ratio: 1;
+  background-color: $backMain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
   position: relative;
-  width: 174px;
-  @media screen and (max-width: 1440px) {
-    height: 174px;
-  }
   &:not(.card__add):before {
     background: linear-gradient(178.47deg, rgba(0, 0, 0, 0) 69.85%, #000000 98.7%);
     border-radius: 10px;
@@ -819,7 +831,7 @@ body {
   &__card {
     aspect-ratio: 1;
     background-color: $backMain;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
     position: relative;
