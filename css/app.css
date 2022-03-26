@@ -1749,6 +1749,26 @@ body.scroll-off {
       top: 0;
       transition: all .3s ease;
       width: 24px; }
+  .add-tour__iframe {
+    margin: 30px 0 -55px;
+    position: relative; }
+  .add-tour__map-card {
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    position: absolute;
+    top: 100px;
+    left: 60%; }
+    .add-tour__map-card_img {
+      aspect-ratio: 1;
+      border-radius: 4px;
+      overflow: hidden;
+      width: 80px; }
+    .add-tour__map-card_desc {
+      height: 32px;
+      overflow: hidden;
+      line-height: 32px;
+      padding: 0 8px;
+      text-align: center; }
   .add-tour__item {
     background: no-repeat right center url("../img/icons/file-plus.svg");
     box-shadow: inset 0px -0.5px 0px #BCBBC1;
@@ -1824,4 +1844,4 @@ body.scroll-off {
     display: flex;
     justify-content: flex-end; }
     .add-tour__btn-wrap .btn-main {
-      margin-bottom: 22px; }
+      margin-left: 22px; }

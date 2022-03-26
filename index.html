@@ -735,6 +735,12 @@
 <!--          add tour header-->
           <div class="add-tour__header">
             <h3 class="add-tour__title">Florence at night</h3>
+            <!--          search-->
+            <form action="">
+              <label class="media-lib__search-label">
+                <input type="text" class="media-lib__search" placeholder="Search">
+              </label>
+            </form>
           </div>
 
 <!--          add tour content #1-->
@@ -783,8 +789,17 @@
             </div>
           </div>
 
+<!--          add tour content #4-->
+          <div class="add-tour__iframe">
+            <iframe width="100%" height="450" id="gmap_canvas" src="https://maps.google.com/maps?q=florance&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <div class="add-tour__map-card">
+              <img class="add-tour__map-card_img" src="img/card-background.jpg" alt="">
+              <div class="add-tour__map-card_desc">POI#2</div>
+            </div>
+          </div>
+
 <!--          add tour content #5-->
-          <div class="add-tour__content">
+          <div class="add-tour__content" style="display: none">
             <div class="add-tour__column">
               <section class="add-tour__section">
                 <h4 class="add-tour__subtitle">Itinerary</h4>
@@ -813,7 +828,7 @@
 <!--        add tour buttons-->
         <div class="add-tour__btn-wrap">
           <button class="btn-main disabled">Save Draft</button>
-          <button class="btn-main">Publish</button>
+          <button class="btn-main">Continue</button>
         </div>
 
 <!--        add tour steps-->
@@ -822,8 +837,8 @@
             <li class="add-tour__steps_item completed"></li>
             <li class="add-tour__steps_item completed"></li>
             <li class="add-tour__steps_item completed"></li>
-            <li class="add-tour__steps_item completed"></li>
             <li class="add-tour__steps_item active"></li>
+            <li class="add-tour__steps_item"></li>
           </ul>
         </div>
       </div>
