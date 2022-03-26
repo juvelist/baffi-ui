@@ -1680,6 +1680,28 @@ body {
     }
   }
 
+  // add tour content #2
+  &__desc {
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    padding: 0 100px;
+    &_title {
+      background: no-repeat right center url('../img/icons/edit_24.svg');
+      color: $colorDark;
+      font: 400 16px helvetica-neue-regular, sans-serif;
+      margin-bottom: 10px;
+    }
+    &_textarea {
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      color: $colorDark;
+      font: 400 14px helvetica-neue-regular, sans-serif;
+      height: 200px;
+      padding: 18px;
+      resize: none;
+      width: 100%;
+    }
+  }
+
   // add tour content #4
   &__iframe {
     margin: 30px 0 -55px;
@@ -1790,12 +1812,19 @@ body {
   // add tour header
   &__header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 100px;
   }
   &__title {
     color: $colorDark;
     font: 700 24px helvetica-neue-bold, sans-serif;
+  }
+  &__info {
+    color: $colorDark;
+    font: 400 20px helvetica-neue-regular, sans-serif;
+    margin: 12px 0 48px;
+    width: 100%;
   }
 
   // add tour buttons

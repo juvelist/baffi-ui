@@ -1749,6 +1749,23 @@ body.scroll-off {
       top: 0;
       transition: all .3s ease;
       width: 24px; }
+  .add-tour__desc {
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    padding: 0 100px; }
+    .add-tour__desc_title {
+      background: no-repeat right center url("../img/icons/edit_24.svg");
+      color: #454E5D;
+      font: 400 16px helvetica-neue-regular, sans-serif;
+      margin-bottom: 10px; }
+    .add-tour__desc_textarea {
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      color: #454E5D;
+      font: 400 14px helvetica-neue-regular, sans-serif;
+      height: 200px;
+      padding: 18px;
+      resize: none;
+      width: 100%; }
   .add-tour__iframe {
     margin: 30px 0 -55px;
     position: relative; }
@@ -1835,11 +1852,17 @@ body.scroll-off {
         border: 2px solid #F37037; }
   .add-tour__header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 100px; }
   .add-tour__title {
     color: #454E5D;
     font: 700 24px helvetica-neue-bold, sans-serif; }
+  .add-tour__info {
+    color: #454E5D;
+    font: 400 20px helvetica-neue-regular, sans-serif;
+    margin: 12px 0 48px;
+    width: 100%; }
   .add-tour__btn-wrap {
     display: flex;
     justify-content: flex-end; }

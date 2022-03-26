@@ -735,12 +735,13 @@
 <!--          add tour header-->
           <div class="add-tour__header">
             <h3 class="add-tour__title">Florence at night</h3>
-            <!--          search-->
-            <form action="">
+<!--          add tour search-->
+            <form action="" style="display: none">
               <label class="media-lib__search-label">
                 <input type="text" class="media-lib__search" placeholder="Search">
               </label>
             </form>
+            <p class="add-tour__info">Please provide both short and long descriptions of your tour</p>
           </div>
 
 <!--          add tour content #1-->
@@ -789,8 +790,20 @@
             </div>
           </div>
 
+<!--          add tour content #2-->
+          <div class="add-tour__content add-tour__desc">
+            <div class="add-tour__column">
+              <p class="add-tour__desc_title">Short Description (Up to 250 characters)</p>
+              <textarea class="add-tour__desc_textarea"></textarea>
+            </div>
+            <div class="add-tour__column">
+              <p class="add-tour__desc_title">Long Description (Up to 1250 characters)</p>
+              <textarea class="add-tour__desc_textarea">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</textarea>
+            </div>
+          </div>
+
 <!--          add tour content #4-->
-          <div class="add-tour__iframe">
+          <div class="add-tour__iframe" style="display: none">
             <iframe width="100%" height="450" id="gmap_canvas" src="https://maps.google.com/maps?q=florance&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             <div class="add-tour__map-card">
               <img class="add-tour__map-card_img" src="img/card-background.jpg" alt="">
