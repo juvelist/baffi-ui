@@ -730,15 +730,71 @@
 
 <!--      add-tour-->
       <div class="add-tour">
-        <div class="add-tour__card"></div>
+        <div class="add-tour__card">
+
+<!--          add tour header-->
+          <div class="add-tour__header" style="display: none">
+            <h3 class="add-tour__card_title"></h3>
+          </div>
+
+<!--          add tour content #1-->
+          <div class="add-tour__content">
+            <div class="add-tour__column">
+              <section class="add-tour__section">
+                <h4 class="add-tour__subtitle">Tour Details</h4>
+                <div class="add-tour__field edit">
+                  <input type="text" placeholder="Tour name" value="Florence at night">
+                </div>
+              </section>
+              <section class="add-tour__section">
+                <h4 class="add-tour__subtitle">Location</h4>
+                <div class="add-tour__field select">
+                  <input type="text" placeholder="Country" value="Italy">
+                </div>
+                <div class="add-tour__field edit">
+                  <input type="text" placeholder="City" value="Florence">
+                </div>
+                <div class="add-tour__field select">
+                  <input type="text" placeholder="State/Province" value="FI">
+                </div>
+              </section>
+            </div>
+            <div class="add-tour__column">
+              <section class="add-tour__section">
+                <h4 class="add-tour__subtitle">Tour Type & Price</h4>
+                <div class="add-tour__field">
+                  <input type="text" placeholder="Category" value="">
+                </div>
+                <div class="add-tour__categories">
+                  <div class="add-tour__category">Sightseeing</div>
+                  <div class="add-tour__category">Culture</div>
+                  <div class="add-tour__category">Adventure</div>
+                </div>
+                <div class="add-tour__field select">
+                  <input type="text" placeholder="Type" value="">
+                </div>
+                <div class="add-tour__field select">
+                  <input type="text" placeholder="Language" value="Italian">
+                </div>
+                <div class="add-tour__field edit">
+                  <input type="text" placeholder="Price" value="€ 80.00">
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+<!--        add tour buttons-->
         <div class="add-tour__btn-wrap">
           <button class="btn-main disabled">Save Draft</button>
           <button class="btn-main">Continue</button>
         </div>
+
+<!--        add tour steps-->
         <div class="add-tour__steps">
           <ul class="add-tour__steps_list">
             <li class="add-tour__steps_item completed"></li>
-            <li class="add-tour__steps_item active"></li>
+            <li class="add-tour__steps_item"></li>
             <li class="add-tour__steps_item"></li>
             <li class="add-tour__steps_item"></li>
             <li class="add-tour__steps_item"></li>

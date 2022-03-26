@@ -1689,6 +1689,66 @@ body.scroll-off {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 22px;
     padding: 32px 0 48px; }
+  .add-tour__content {
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    grid-template-columns: repeat(2, 368px);
+    padding: 0 30px; }
+  .add-tour__section {
+    margin-bottom: 15px; }
+  .add-tour__subtitle {
+    box-shadow: inset 0px -0.5px 0px #BCBBC1;
+    color: #454E5D;
+    font: 700 24px helvetica-neue-bold, sans-serif;
+    padding: 15px; }
+  .add-tour__categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    padding: 15px 0; }
+  .add-tour__category {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    color: #454E5D;
+    font: 400 14px helvetica-neue-regular, sans-serif;
+    padding: 6px 16px;
+    margin-right: 15px; }
+  .add-tour__field {
+    box-shadow: inset 0px -0.5px 0px #BCBBC1;
+    color: #454E5D;
+    margin-left: 15px;
+    padding: 15px 45px 15px 0;
+    position: relative; }
+    .add-tour__field input {
+      color: #454E5D;
+      font: 500 20px helvetica-neue-medium, sans-serif;
+      width: 100%; }
+      .add-tour__field input::placeholder {
+        font: 400 20px helvetica-neue-regular, sans-serif;
+        opacity: .5; }
+    .add-tour__field.edit:before {
+      background: no-repeat center/contain url("../img/icons/edit_24.svg");
+      bottom: 0;
+      content: '';
+      height: 24px;
+      right: 18px;
+      margin: auto 0;
+      position: absolute;
+      top: 0;
+      transition: all .3s ease;
+      width: 24px; }
+    .add-tour__field.select:before {
+      background: no-repeat center/contain url("../img/icons/arrow-light.svg");
+      bottom: 0;
+      content: '';
+      height: 24px;
+      right: 18px;
+      margin: auto 0;
+      position: absolute;
+      top: 0;
+      transition: all .3s ease;
+      width: 24px; }
   .add-tour__steps {
     position: absolute;
     top: 50px;
@@ -1720,6 +1780,10 @@ body.scroll-off {
           width: 14px; }
       .add-tour__steps_item.active {
         border: 2px solid #F37037; }
+  .add-tour__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px; }
   .add-tour__btn-wrap {
     display: flex;
     justify-content: flex-end; }

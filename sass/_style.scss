@@ -1607,6 +1607,80 @@ body {
     margin-bottom: 22px;
     padding: 32px 0 48px;
   }
+
+  // add tour content #1
+  &__content {
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    grid-template-columns: repeat(2, 368px);
+    padding: 0 30px;
+  }
+  &__section {
+    margin-bottom: 15px;
+  }
+  &__subtitle {
+    box-shadow: inset 0px -0.5px 0px $colorShadow;
+    color: $colorDark;
+    font: 700 24px helvetica-neue-bold, sans-serif;
+    padding: 15px;
+  }
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    padding: 15px 0;
+  }
+  &__category {
+    border: 1px solid $colorBlack;
+    border-radius: 4px;
+    color: $colorDark;
+    font: 400 14px helvetica-neue-regular, sans-serif;
+    padding: 6px 16px;
+    margin-right: 15px;
+  }
+  &__field {
+    box-shadow: inset 0px -0.5px 0px $colorShadow;
+    color: $colorDark;
+    margin-left: 15px;
+    padding: 15px 45px 15px 0;
+    position: relative;
+    input {
+      color: $colorDark;
+      font: 500 20px helvetica-neue-medium, sans-serif;
+      width: 100%;
+      &::placeholder {
+        font: 400 20px helvetica-neue-regular, sans-serif;
+        opacity: .5;
+      }
+    }
+    &.edit:before {
+      background: no-repeat center/contain url('../img/icons/edit_24.svg');
+      bottom: 0;
+      content: '';
+      height: 24px;
+      right: 18px;
+      margin: auto 0;
+      position: absolute;
+      top: 0;
+      transition: all .3s ease;
+      width: 24px;
+    }
+    &.select:before {
+      background: no-repeat center/contain url('../img/icons/arrow-light.svg');
+      bottom: 0;
+      content: '';
+      height: 24px;
+      right: 18px;
+      margin: auto 0;
+      position: absolute;
+      top: 0;
+      transition: all .3s ease;
+      width: 24px;
+    }
+  }
+
+  // add tour steps
   &__steps {
     position: absolute;
     top: 50px;
@@ -1645,7 +1719,14 @@ body {
     }
   }
 
+  // add tour header
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+  }
 
+  // add tour buttons
   &__btn-wrap {
     display: flex;
     justify-content: flex-end;
