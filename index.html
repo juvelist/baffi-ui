@@ -733,12 +733,12 @@
         <div class="add-tour__card">
 
 <!--          add tour header-->
-          <div class="add-tour__header" style="display: none">
-            <h3 class="add-tour__card_title"></h3>
+          <div class="add-tour__header">
+            <h3 class="add-tour__title">Florence at night</h3>
           </div>
 
 <!--          add tour content #1-->
-          <div class="add-tour__content">
+          <div class="add-tour__content" style="display: none">
             <div class="add-tour__column">
               <section class="add-tour__section">
                 <h4 class="add-tour__subtitle">Tour Details</h4>
@@ -782,22 +782,48 @@
               </section>
             </div>
           </div>
+
+<!--          add tour content #5-->
+          <div class="add-tour__content">
+            <div class="add-tour__column">
+              <section class="add-tour__section">
+                <h4 class="add-tour__subtitle">Itinerary</h4>
+                <p class="add-tour__item active"><span>POI#1</span>Piazza Signoria Centro</p>
+                <p class="add-tour__item"><span>POI#2</span>Uffizi Gallery</p>
+                <p class="add-tour__item"><span>POI#3</span>Piazza Santo Spirito</p>
+
+              </section>
+            </div>
+            <div class="add-tour__column">
+              <section class="add-tour__section">
+                <h4 class="add-tour__subtitle">Tour Duration</h4>
+
+                <div class="add-tour__estimate">
+                  <p class="add-tour__estimate_text">Your estimate:</p>
+                  <div class="add-tour__estimate_item">Days</div>
+                  <div class="add-tour__estimate_item">Hours</div>
+                  <div class="add-tour__estimate_item">Minutes</div>
+                </div>
+                <p class="add-tour__item-dur">According to map: <span>1.5 hours</span></p>
+              </section>
+            </div>
+          </div>
         </div>
 
 <!--        add tour buttons-->
         <div class="add-tour__btn-wrap">
           <button class="btn-main disabled">Save Draft</button>
-          <button class="btn-main">Continue</button>
+          <button class="btn-main">Publish</button>
         </div>
 
 <!--        add tour steps-->
         <div class="add-tour__steps">
           <ul class="add-tour__steps_list">
             <li class="add-tour__steps_item completed"></li>
-            <li class="add-tour__steps_item"></li>
-            <li class="add-tour__steps_item"></li>
-            <li class="add-tour__steps_item"></li>
-            <li class="add-tour__steps_item"></li>
+            <li class="add-tour__steps_item completed"></li>
+            <li class="add-tour__steps_item completed"></li>
+            <li class="add-tour__steps_item completed"></li>
+            <li class="add-tour__steps_item active"></li>
           </ul>
         </div>
       </div>

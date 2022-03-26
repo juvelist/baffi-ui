@@ -1749,6 +1749,39 @@ body.scroll-off {
       top: 0;
       transition: all .3s ease;
       width: 24px; }
+  .add-tour__item {
+    background: no-repeat right center url("../img/icons/file-plus.svg");
+    box-shadow: inset 0px -0.5px 0px #BCBBC1;
+    color: #454E5D;
+    font: 400 20px helvetica-neue-regular, sans-serif;
+    margin-left: 15px;
+    padding: 15px 45px 15px 0; }
+    .add-tour__item.active {
+      background: no-repeat right center url("../img/icons/file-plus-active.svg"); }
+    .add-tour__item > span {
+      margin-right: 15px; }
+  .add-tour__estimate {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    padding: 15px 0; }
+    .add-tour__estimate_text {
+      flex-basis: 100%;
+      font: 400 20px helvetica-neue-regular, sans-serif;
+      margin-bottom: 10px; }
+    .add-tour__estimate_item {
+      border: 1px solid #BCBBC1;
+      border-radius: 8px;
+      color: #454E5D;
+      font: 400 17px helvetica-neue-regular, sans-serif;
+      padding: 15px 35px 15px 15px;
+      margin-right: 15px; }
+  .add-tour__item-dur {
+    box-shadow: inset 0px -0.5px 0px #BCBBC1;
+    color: #454E5D;
+    font: 400 20px helvetica-neue-regular, sans-serif;
+    margin-left: 15px;
+    padding: 15px 45px 15px 0; }
   .add-tour__steps {
     position: absolute;
     top: 50px;
@@ -1784,8 +1817,11 @@ body.scroll-off {
     display: flex;
     justify-content: space-between;
     padding: 0 100px; }
+  .add-tour__title {
+    color: #454E5D;
+    font: 700 24px helvetica-neue-bold, sans-serif; }
   .add-tour__btn-wrap {
     display: flex;
     justify-content: flex-end; }
     .add-tour__btn-wrap .btn-main {
-      margin-left: 22px; }
+      margin-bottom: 22px; }

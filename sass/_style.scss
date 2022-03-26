@@ -1680,6 +1680,48 @@ body {
     }
   }
 
+  // add tour content #5
+  &__item {
+    background: no-repeat right center url('../img/icons/file-plus.svg');
+    box-shadow: inset 0px -0.5px 0px $colorShadow;
+    color: $colorDark;
+    font: 400 20px helvetica-neue-regular, sans-serif;
+    margin-left: 15px;
+    padding: 15px 45px 15px 0;
+    &.active {
+      background: no-repeat right center url('../img/icons/file-plus-active.svg');
+    }
+    & > span {
+      margin-right: 15px;
+    }
+  }
+  &__estimate {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    padding: 15px 0;
+    &_text {
+      flex-basis: 100%;
+      font: 400 20px helvetica-neue-regular, sans-serif;
+      margin-bottom: 10px;
+    }
+    &_item {
+      border: 1px solid $colorShadow;
+      border-radius: 8px;
+      color: $colorDark;
+      font: 400 17px helvetica-neue-regular, sans-serif;
+      padding: 15px 35px 15px 15px;
+      margin-right: 15px;
+    }
+  }
+  &__item-dur {
+    box-shadow: inset 0px -0.5px 0px $colorShadow;
+    color: $colorDark;
+    font: 400 20px helvetica-neue-regular, sans-serif;
+    margin-left: 15px;
+    padding: 15px 45px 15px 0;
+  }
+
   // add tour steps
   &__steps {
     position: absolute;
@@ -1725,13 +1767,17 @@ body {
     justify-content: space-between;
     padding: 0 100px;
   }
+  &__title {
+    color: $colorDark;
+    font: 700 24px helvetica-neue-bold, sans-serif;
+  }
 
   // add tour buttons
   &__btn-wrap {
     display: flex;
     justify-content: flex-end;
     .btn-main {
-      margin-left: 22px;
+      margin-bottom: 22px;
     }
   }
 }
