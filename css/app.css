@@ -1776,24 +1776,35 @@ body.scroll-off {
     @media screen and (max-width: 1680px) {
       .add-tour__grid {
         grid-template-columns: repeat(5, minmax(173px, 1fr)); } }
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       .add-tour__grid {
         grid-template-columns: repeat(4, minmax(173px, 1fr)); } }
     @media screen and (max-width: 1200px) {
       .add-tour__grid {
         grid-template-columns: repeat(3, minmax(173px, 1fr)); } }
+    .add-tour__grid.create {
+      flex-grow: 1;
+      grid-template-columns: repeat(4, minmax(173px, 1fr)); }
+      @media screen and (max-width: 1680px) {
+        .add-tour__grid.create {
+          grid-template-columns: repeat(3, minmax(173px, 1fr)); } }
+      @media screen and (max-width: 1439px) {
+        .add-tour__grid.create {
+          grid-template-columns: repeat(2, minmax(173px, 1fr)); } }
     .add-tour__grid_item {
       aspect-ratio: 1;
       background: no-repeat center url("../img/icons/camera.svg"), no-repeat center/cover url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%23C7C7C7FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='44' stroke-linecap='butt'/%3e%3c/svg%3e") rgba(184, 184, 184, 0.2);
       border-radius: 12px;
       cursor: pointer;
       position: relative; }
-      .add-tour__grid_item:first-child {
+      .add-tour__grid_item.add {
         background: no-repeat center url("../img/icons/plus.png"), no-repeat center/cover url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%23C7C7C7FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='44' stroke-linecap='butt'/%3e%3c/svg%3e") rgba(184, 184, 184, 0.2); }
       .add-tour__grid_item.active > span {
         background: no-repeat center url("../img/icons/edit-orange.svg"); }
+        .add-tour__grid_item.active > span:hover {
+          transform: scaleX(-1); }
       .add-tour__grid_item.active.video:before {
-        background: no-repeat center/contain url(../img/icons/play-small.svg);
+        background: no-repeat center/contain url("../img/icons/play-small.svg");
         content: '';
         height: 24px;
         left: 50%;
@@ -1801,6 +1812,27 @@ body.scroll-off {
         top: 50%;
         transform: translate(-50%, -50%);
         width: 26px; }
+      .add-tour__grid_item.active.audio {
+        background: linear-gradient(92deg, #F8D948 17%, #FFA900 89%); }
+        .add-tour__grid_item.active.audio:before {
+          background: no-repeat center/contain url("../img/icons/mic.svg");
+          content: '';
+          height: 52px;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 53px; }
+    .add-tour__grid_top {
+      grid-column: 1/5;
+      color: #454E5D;
+      font: 400 20px helvetica-neue-regular, sans-serif; }
+      @media screen and (max-width: 1680px) {
+        .add-tour__grid_top {
+          grid-column: 1/4; } }
+      @media screen and (max-width: 1439px) {
+        .add-tour__grid_top {
+          grid-column: 1/3; } }
     .add-tour__grid_btn {
       background: no-repeat center url("../img/icons/plus-orange.svg");
       bottom: -3px;
@@ -1808,7 +1840,10 @@ body.scroll-off {
       height: 16px;
       position: absolute;
       right: -3px;
+      transition: transform .3s ease-out;
       width: 16px; }
+      .add-tour__grid_btn:hover {
+        transform: rotate(90deg); }
   .add-tour__iframe {
     margin: 30px 0 -55px;
     position: relative; }
@@ -1862,6 +1897,55 @@ body.scroll-off {
     font: 400 20px helvetica-neue-regular, sans-serif;
     margin-left: 15px;
     padding: 15px 45px 15px 0; }
+  .add-tour__create {
+    padding: 0 100px; }
+    .add-tour__create_list {
+      flex: 0 0 365px;
+      margin-left: 20px; }
+    .add-tour__create_list-title {
+      color: #454E5D;
+      font: 400 20px helvetica-neue-regular, sans-serif; }
+    .add-tour__create_input-wrap {
+      align-items: center;
+      background: no-repeat left center url("../img/icons/attach.svg");
+      box-shadow: inset 0px -0.5px 0px #BCBBC1;
+      display: flex;
+      height: 54px;
+      justify-content: space-between;
+      padding-left: 32px; }
+      .add-tour__create_input-wrap.active {
+        background: no-repeat left center url("../img/icons/attach-active.svg"); }
+      .add-tour__create_input-wrap > input {
+        display: block;
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+    .add-tour__create_btn-plus {
+      background: no-repeat left center url("../img/icons/plus-grey.svg");
+      cursor: pointer;
+      height: 24px;
+      transition: transform .3s ease-out;
+      width: 24px; }
+      .add-tour__create_btn-plus:hover {
+        transform: rotate(90deg); }
+    .add-tour__create_btn-trash {
+      background: no-repeat left center url("../img/icons/trash.svg");
+      cursor: pointer;
+      height: 24px;
+      margin-left: 20px;
+      width: 24px; }
+    .add-tour__create_btn-edit {
+      background: no-repeat left center url("../img/icons/edit_24.svg");
+      cursor: pointer;
+      height: 24px;
+      margin-left: 20px;
+      width: 24px; }
+  .add-tour__create-wrap {
+    display: flex; }
+  .add-tour__create-top {
+    width: 100%;
+    flex: 0 0 100%; }
   .add-tour__steps {
     position: absolute;
     top: 50px;
@@ -1900,11 +1984,13 @@ body.scroll-off {
     padding: 0 100px; }
   .add-tour__title {
     color: #454E5D;
-    font: 700 24px helvetica-neue-bold, sans-serif; }
+    font: 700 24px helvetica-neue-bold, sans-serif;
+    margin-bottom: 12px;
+    width: 100%; }
   .add-tour__info {
     color: #454E5D;
     font: 400 20px helvetica-neue-regular, sans-serif;
-    margin: 12px 0 48px;
+    margin-bottom: 48px;
     width: 100%; }
   .add-tour__btn-wrap {
     display: flex;

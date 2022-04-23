@@ -734,16 +734,17 @@
 
 <!--          add tour header-->
           <div class="add-tour__header">
-            <h3 class="add-tour__title">Florence at night</h3>
+<!--            <h3 class="add-tour__title">Florence at night</h3>-->
+<!--            <h3 class="add-tour__title">Florence at night</h3>-->
+            <input class="add-tour__title create" value="POI#2  Uffizi Gallery ">
 <!--          add tour search-->
             <form action="" style="display: none">
               <label class="media-lib__search-label">
                 <input type="text" class="media-lib__search" placeholder="Search">
               </label>
             </form>
-            <p class="add-tour__info">Load the intro photos and Video (up to10)</p>
+<!--            <p class="add-tour__info">Load the intro photos and Video (up to10)</p>-->
           </div>
-
 <!--          add tour content #1-->
           <div class="add-tour__content" style="display: none">
             <div class="add-tour__column">
@@ -813,9 +814,9 @@
           </div>
 
 <!--          add tour content #3-->
-          <div class="add-tour__grid-wrap">
+          <div class="add-tour__grid-wrap" style="display: none">
             <div class="add-tour__grid">
-              <div class="add-tour__grid_item">
+              <div class="add-tour__grid_item add">
                 <span class="add-tour__grid_btn"></span>
               </div>
               <div class="add-tour__grid_item active" style="background: no-repeat center/cover url('img/card-background.jpg')">
@@ -865,13 +866,11 @@
                 <p class="add-tour__item active"><span>POI#1</span>Piazza Signoria Centro</p>
                 <p class="add-tour__item"><span>POI#2</span>Uffizi Gallery</p>
                 <p class="add-tour__item"><span>POI#3</span>Piazza Santo Spirito</p>
-
               </section>
             </div>
             <div class="add-tour__column" >
               <section class="add-tour__section">
                 <h4 class="add-tour__subtitle">Tour Duration</h4>
-
                 <div class="add-tour__estimate">
                   <p class="add-tour__estimate_text">Your estimate:</p>
                   <div class="add-tour__estimate_item">Days</div>
@@ -882,16 +881,64 @@
               </section>
             </div>
           </div>
+
+<!--          add tour / create-->
+          <div class="add-tour__create">
+            <div class="add-tour__create-wrap">
+              <div class="add-tour__grid create">
+                <p class="add-tour__grid_top">Load POI Media (up to10)</p>
+                <div class="add-tour__grid_item add">
+                  <span class="add-tour__grid_btn"></span>
+                </div>
+                <div class="add-tour__grid_item active" style="background: no-repeat center/cover url('img/card-background.jpg')">
+                  <span class="add-tour__grid_btn"></span>
+                </div>
+                <div class="add-tour__grid_item active" style="background: no-repeat center/cover url('img/card-background.jpg')">
+                  <span class="add-tour__grid_btn"></span>
+                </div>
+                <div class="add-tour__grid_item video active" style="background: no-repeat center/cover url('img/video-background.png')">
+                  <span class="add-tour__grid_btn"></span>
+                </div>
+                <div class="add-tour__grid_item audio active">
+                  <span class="add-tour__grid_btn"></span>
+                </div>
+                <div class="add-tour__grid_item">
+                  <span class="add-tour__grid_btn"></span>
+                </div>
+              </div>
+              <div class="add-tour__create_list">
+                <p class="add-tour__create_list-title">Insert web links</p>
+                <div class="add-tour__create_input-wrap">
+                  <input type="text" placeholder="Enter the URL here">
+                  <span class="add-tour__create_btn-plus"></span>
+                </div>
+                <div class="add-tour__create_input-wrap active">
+                  <input type="text" value="https://www.palazzostrozzi.org/" disabled>
+                  <span class="add-tour__create_btn-edit"></span>
+                  <span class="add-tour__create_btn-trash"></span>
+                </div>
+                <div class="add-tour__create_input-wrap active">
+                  <input type="text" value="https://www.palazzostrozzi.org/" disabled>
+                  <span class="add-tour__create_btn-edit"></span>
+                  <span class="add-tour__create_btn-trash"></span>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
         </div>
 
 <!--        add tour buttons-->
         <div class="add-tour__btn-wrap">
-          <button class="btn-main disabled">Save Draft</button>
-          <button class="btn-main">Continue</button>
+<!--          <button class="btn-main disabled">Save Draft</button>-->
+<!--          <button class="btn-main">Continue</button>-->
+          <button class="btn-main">Save</button>
         </div>
 
 <!--        add tour steps-->
-        <div class="add-tour__steps">
+        <div class="add-tour__steps" style="display: none">
           <ul class="add-tour__steps_list">
             <li class="add-tour__steps_item completed"></li>
             <li class="add-tour__steps_item completed"></li>
