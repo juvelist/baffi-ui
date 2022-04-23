@@ -1971,6 +1971,53 @@ body {
     }
   }
 
+  // edit POI
+  &__edit {
+    align-items: center;
+    box-shadow: inset 0px -0.5px 0px #bcbbc1;
+    color: #454E5D;
+    display: flex;
+    font: 400 20px helvetica-neue-regular, sans-serif;
+    padding: 15px 15px 15px 32px;
+    &_title-wrap {
+      background: no-repeat right center url('../img/icons/edit_24.svg');
+      padding-left: 15px;
+      padding-right: 32px;
+      & > span {
+        color: #454E5D;
+        font: 700 24px helvetica-neue-bold, sans-serif;
+        margin-right: 12px;
+      }
+    }
+    &_media {
+      background: no-repeat left center url('../img/icons/picture-grey.svg');
+      &.active {
+        background: no-repeat left center url('../img/icons/picture-orange.svg');
+      }
+    }
+    &_audio {
+      background: no-repeat left center url('../img/icons/mic-grey.svg');
+      &.active {
+        background: no-repeat left center url('../img/icons/mic-orange.svg');
+      }
+    }
+    &_link {
+      background: no-repeat left center url('../img/icons/attach-grey.svg');
+      &.active {
+        background: no-repeat left center url('../img/icons/attach-orange.svg');
+      }
+    }
+  }
+  &__activation {
+    box-shadow: inset 0px -0.5px 0px #bcbbc1;
+    color: #454E5D;
+    display: flex;
+    font: 400 20px helvetica-neue-regular, sans-serif;
+    justify-content: space-between;
+    margin-left: 15px;
+    padding: 15px 15px 15px 0;
+  }
+
   // add tour header
   &__header {
     display: flex;

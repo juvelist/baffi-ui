@@ -115,7 +115,7 @@
     <header class="header smooth">
       <div class="header__content">
         <h1 class="header__title">BAFFI</h1>
-        <h2 class="header__subtitle">Add tour</h2>
+        <h2 class="header__subtitle">Edit POI</h2>
         <form action="" style="display: none;">
           <label class="header__input-label">
             <input type="text" class="header__input" placeholder="Where would you like to go?">
@@ -712,9 +712,6 @@
           </div>
         </div>
 
-
-
-
 <!--        &lt;!&ndash;        drag&ndash;&gt;-->
 <!--        <div class="profile-full__drag">-->
 <!--          <p>Drop files to upload</p>-->
@@ -734,9 +731,8 @@
 
 <!--          add tour header-->
           <div class="add-tour__header">
-<!--            <h3 class="add-tour__title">Florence at night</h3>-->
-<!--            <h3 class="add-tour__title">Florence at night</h3>-->
-            <input class="add-tour__title create" value="POI#2  Uffizi Gallery ">
+            <h3 class="add-tour__title">Florence at night</h3>
+<!--            <input class="add-tour__title create" value="POI#2  Uffizi Gallery ">-->
 <!--          add tour search-->
             <form action="" style="display: none">
               <label class="media-lib__search-label">
@@ -883,7 +879,7 @@
           </div>
 
 <!--          add tour / create-->
-          <div class="add-tour__create">
+          <div class="add-tour__create" style="display: none">
             <div class="add-tour__create-wrap">
               <div class="add-tour__grid create">
                 <p class="add-tour__grid_top">Load POI Media (up to10)</p>
@@ -922,10 +918,50 @@
                   <span class="add-tour__create_btn-edit"></span>
                   <span class="add-tour__create_btn-trash"></span>
                 </div>
-
-
               </div>
             </div>
+          </div>
+
+<!--          edit POI-->
+          <div class="add-tour__content">
+
+            <div class="add-tour__column">
+              <section class="add-tour__section">
+                <div class="add-tour__edit add-tour__edit_title-wrap">
+                  <span>POI#2</span>
+                  <label>
+                    <input class="" value="Uffizi Gallery">
+                  </label>
+                </div>
+
+                <div class="add-tour__edit add-tour__edit_media active">Add media</div>
+                <div class="add-tour__edit add-tour__edit_audio">Record audio</div>
+                <div class="add-tour__edit add-tour__edit_link active">Insert a web link</div>
+
+              </section>
+            </div>
+            <div class="add-tour__column" >
+              <section class="add-tour__section">
+                <h4 class="add-tour__subtitle">POI Activation Options</h4>
+                <div class="add-tour__activation">
+                  <p class="add-tour__activation_text">Location (GPS)</p>
+<!--              switcher-->
+                  <label class="switcher">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="add-tour__activation">
+                  <p class="add-tour__activation_text">I'm Here Button</p>
+<!--              switcher-->
+                  <label class="switcher">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                  </label>
+                </div>
+              </section>
+            </div>
+
           </div>
 
         </div>
@@ -934,7 +970,7 @@
         <div class="add-tour__btn-wrap">
 <!--          <button class="btn-main disabled">Save Draft</button>-->
 <!--          <button class="btn-main">Continue</button>-->
-          <button class="btn-main">Save</button>
+          <button class="btn-main">Save POI</button>
         </div>
 
 <!--        add tour steps-->
