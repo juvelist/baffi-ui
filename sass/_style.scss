@@ -1702,6 +1702,66 @@ body {
     }
   }
 
+  // add tour content #3
+  &__grid-wrap {
+    padding: 0 90px;
+  }
+  &__grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(7, minmax(173px, 1fr));
+    margin-bottom: 20px;
+    @media screen and (max-width: 1680px) {
+      grid-template-columns: repeat(5, minmax(173px, 1fr));
+    }
+    @media screen and (max-width: 1440px) {
+      grid-template-columns: repeat(4, minmax(173px, 1fr));
+    }
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: repeat(3, minmax(173px, 1fr));
+    }
+    &_item {
+      aspect-ratio: 1;
+      background:
+          no-repeat center url("../img/icons/camera.svg"),
+          no-repeat center/cover url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%23C7C7C7FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='44' stroke-linecap='butt'/%3e%3c/svg%3e") $backPhoto;
+      border-radius: 12px;
+      cursor: pointer;
+      position: relative;
+      &:first-child {
+        background:
+            no-repeat center url("../img/icons/plus.png"),
+            no-repeat center/cover url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%23C7C7C7FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='44' stroke-linecap='butt'/%3e%3c/svg%3e") $backPhoto;
+      }
+      &.active {
+        & > span {
+          background: no-repeat center url("../img/icons/edit-orange.svg");
+        }
+        &.video:before {
+          background: no-repeat center/contain url(../img/icons/play-small.svg);
+          content: '';
+          height: 24px;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 26px;
+        }
+      }
+
+    }
+    &_btn {
+      background: no-repeat center url("../img/icons/plus-orange.svg");
+      bottom: -3px;
+      content: '';
+      height: 16px;
+      position: absolute;
+      right: -3px;
+      width: 16px;
+    }
+  }
+
+
   // add tour content #4
   &__iframe {
     margin: 30px 0 -55px;

@@ -1766,6 +1766,49 @@ body.scroll-off {
       padding: 18px;
       resize: none;
       width: 100%; }
+  .add-tour__grid-wrap {
+    padding: 0 90px; }
+  .add-tour__grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(7, minmax(173px, 1fr));
+    margin-bottom: 20px; }
+    @media screen and (max-width: 1680px) {
+      .add-tour__grid {
+        grid-template-columns: repeat(5, minmax(173px, 1fr)); } }
+    @media screen and (max-width: 1440px) {
+      .add-tour__grid {
+        grid-template-columns: repeat(4, minmax(173px, 1fr)); } }
+    @media screen and (max-width: 1200px) {
+      .add-tour__grid {
+        grid-template-columns: repeat(3, minmax(173px, 1fr)); } }
+    .add-tour__grid_item {
+      aspect-ratio: 1;
+      background: no-repeat center url("../img/icons/camera.svg"), no-repeat center/cover url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%23C7C7C7FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='44' stroke-linecap='butt'/%3e%3c/svg%3e") rgba(184, 184, 184, 0.2);
+      border-radius: 12px;
+      cursor: pointer;
+      position: relative; }
+      .add-tour__grid_item:first-child {
+        background: no-repeat center url("../img/icons/plus.png"), no-repeat center/cover url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%23C7C7C7FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='44' stroke-linecap='butt'/%3e%3c/svg%3e") rgba(184, 184, 184, 0.2); }
+      .add-tour__grid_item.active > span {
+        background: no-repeat center url("../img/icons/edit-orange.svg"); }
+      .add-tour__grid_item.active.video:before {
+        background: no-repeat center/contain url(../img/icons/play-small.svg);
+        content: '';
+        height: 24px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 26px; }
+    .add-tour__grid_btn {
+      background: no-repeat center url("../img/icons/plus-orange.svg");
+      bottom: -3px;
+      content: '';
+      height: 16px;
+      position: absolute;
+      right: -3px;
+      width: 16px; }
   .add-tour__iframe {
     margin: 30px 0 -55px;
     position: relative; }

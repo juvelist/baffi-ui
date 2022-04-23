@@ -741,7 +741,7 @@
                 <input type="text" class="media-lib__search" placeholder="Search">
               </label>
             </form>
-            <p class="add-tour__info">Please provide both short and long descriptions of your tour</p>
+            <p class="add-tour__info">Load the intro photos and Video (up to10)</p>
           </div>
 
 <!--          add tour content #1-->
@@ -770,13 +770,23 @@
               <section class="add-tour__section">
                 <h4 class="add-tour__subtitle">Tour Type & Price</h4>
                 <div class="add-tour__field">
-                  <input type="text" placeholder="Category" value="">
+                  <input type="text" placeholder="Select Category" value="">
                 </div>
                 <div class="add-tour__categories">
                   <div class="add-tour__category">Sightseeing</div>
                   <div class="add-tour__category">Culture</div>
                   <div class="add-tour__category">Adventure</div>
                 </div>
+
+                <div class="add-tour__field">
+                  <input type="text" placeholder="Search or add Tags (enter up to 5)" value="">
+                </div>
+                <div class="add-tour__categories">
+                  <div class="add-tour__category">Country +</div>
+                  <div class="add-tour__category">Wine +</div>
+                  <div class="add-tour__category">Cool Bars +</div>
+                </div>
+
                 <div class="add-tour__field select">
                   <input type="text" placeholder="Type" value="">
                 </div>
@@ -791,7 +801,7 @@
           </div>
 
 <!--          add tour content #2-->
-          <div class="add-tour__content add-tour__desc">
+          <div class="add-tour__content add-tour__desc" style="display: none">
             <div class="add-tour__column">
               <p class="add-tour__desc_title">Short Description (Up to 250 characters)</p>
               <textarea class="add-tour__desc_textarea"></textarea>
@@ -799,6 +809,42 @@
             <div class="add-tour__column">
               <p class="add-tour__desc_title">Long Description (Up to 1250 characters)</p>
               <textarea class="add-tour__desc_textarea">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</textarea>
+            </div>
+          </div>
+
+<!--          add tour content #3-->
+          <div class="add-tour__grid-wrap">
+            <div class="add-tour__grid">
+              <div class="add-tour__grid_item">
+                <span class="add-tour__grid_btn"></span>
+              </div>
+              <div class="add-tour__grid_item active" style="background: no-repeat center/cover url('img/card-background.jpg')">
+                <span class="add-tour__grid_btn"></span>
+              </div>
+              <div class="add-tour__grid_item active" style="background: no-repeat center/cover url('img/card-background.jpg')">
+                <span class="add-tour__grid_btn"></span>
+              </div>
+              <div class="add-tour__grid_item active" style="background: no-repeat center/cover url('img/card-background.jpg')">
+                <span class="add-tour__grid_btn"></span>
+              </div>
+              <div class="add-tour__grid_item">
+                <span class="add-tour__grid_btn"></span>
+              </div>
+              <div class="add-tour__grid_item video active" style="background: no-repeat center/cover url('img/video-background.png')">
+                <span class="add-tour__grid_btn"></span>
+              </div>
+              <div class="add-tour__grid_item">
+                <span class="add-tour__grid_btn"></span>
+              </div>
+              <div class="add-tour__grid_item">
+                <span class="add-tour__grid_btn"></span>
+              </div>
+              <div class="add-tour__grid_item">
+                <span class="add-tour__grid_btn"></span>
+              </div>
+              <div class="add-tour__grid_item">
+                <span class="add-tour__grid_btn"></span>
+              </div>
             </div>
           </div>
 
@@ -822,7 +868,7 @@
 
               </section>
             </div>
-            <div class="add-tour__column">
+            <div class="add-tour__column" >
               <section class="add-tour__section">
                 <h4 class="add-tour__subtitle">Tour Duration</h4>
 
@@ -850,8 +896,8 @@
             <li class="add-tour__steps_item completed"></li>
             <li class="add-tour__steps_item completed"></li>
             <li class="add-tour__steps_item completed"></li>
+            <li class="add-tour__steps_item completed"></li>
             <li class="add-tour__steps_item active"></li>
-            <li class="add-tour__steps_item"></li>
           </ul>
         </div>
       </div>
