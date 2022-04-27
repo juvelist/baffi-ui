@@ -102,6 +102,26 @@ body {
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
     }
   }
+  &__loc {
+    &_label {
+      border-bottom: 1px solid #A9A9A9;
+      display: block;
+      margin-bottom: 24px;
+      height: 42px;
+      overflow: hidden;
+      padding: 12px 0;
+      position: relative;
+    }
+    &_input {
+      background: no-repeat right center url('../img/icons/edit_24.svg');
+      color: $colorDark;
+      display: inline-block;
+      font: 500 18px helvetica-neue-medium sans-serif;
+      height: 100%;
+      padding-right: 24px;
+      width: 100%;
+    }
+  }
 }
 
 .home-btn {

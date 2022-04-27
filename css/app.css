@@ -464,6 +464,22 @@ body.scroll-off {
     .modal__button:hover {
       opacity: .9;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12); }
+  .modal__loc_label {
+    border-bottom: 1px solid #A9A9A9;
+    display: block;
+    margin-bottom: 24px;
+    height: 42px;
+    overflow: hidden;
+    padding: 12px 0;
+    position: relative; }
+  .modal__loc_input {
+    background: no-repeat right center url("../img/icons/edit_24.svg");
+    color: #454E5D;
+    display: inline-block;
+    font: 500 18px helvetica-neue-medium sans-serif;
+    height: 100%;
+    padding-right: 24px;
+    width: 100%; }
 
 .home-btn {
   border-radius: 8px;
